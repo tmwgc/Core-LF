@@ -1,0 +1,8 @@
+    .head {
+        display: grid;
+        grid-auto-flow: column;
+        background-color: var(--primary-dark);
+        padding: 12px 32px;
+        align-items: center;
+        justify-content: space-between;
+    }

@@ -1,0 +1,10 @@
+.float {
+    display: grid;
+    background-color: white;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 12px 32px;
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: 32px;
+    box-shadow: 4px 4px 100px 0px rgba(160, 160, 160, 0.12);
+}
