@@ -1,0 +1,17 @@
+.splash {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-dark);;
+    width: 100vw;
+    height: 100vh;
+    flex-direction: column;
+}
+.animation_circle{
+    margin-top: 20px;
+    width: 10px;
+    height: 10px;
+    border: none;
+    border-radius: 100%;
+    background-color: white;
+}
