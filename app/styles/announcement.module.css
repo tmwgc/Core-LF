@@ -1,0 +1,39 @@
+.main {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	justify-content: space-between;
+	padding: 12px 32px;
+}
+
+.announcement {
+	min-height: 2rem;
+	background-color: white;
+	flex: 2;
+}
+.announcementIn {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	gap: 10px;
+}
+.announcementBtn {
+	display: flex;
+	justify-content: space-between;
+}
+.links {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+}
+.cancel {
+	text-align: center;
+}
+.linkText {
+	color: var(--primary-dark);
+	size: 10px;
+}
+.heading {
+	font-size: 22px;
+}
