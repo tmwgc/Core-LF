@@ -1,10 +1,29 @@
 .float {
-    display: grid;
+    display: flex;
     background-color: white;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 12px 32px;
     align-items: center;
     justify-content: space-between;
-    grid-gap: 32px;
+    grid-gap: 10px;
     box-shadow: 4px 4px 100px 0px rgba(160, 160, 160, 0.12);
+
 }
+.links{
+    padding: 20px;
+    position: relative;
+}
+
+.links::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px; /* Adjust height as needed */
+    background-color: #000E56; /* Color of the bottom border */
+    transition: width 0.3s ease; /* Smooth transition for hover effect */
+  }
+  
+
+  .activeLink::after {
+    width: 100%; /* Full width for the active link */
+  }

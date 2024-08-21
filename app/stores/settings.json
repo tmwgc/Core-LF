@@ -15,20 +15,53 @@
 			"call": "/",
 			"audit": "/"
 		}
-	},
+	}
+	,"navigation":
+		{
+			"label":"homeLogo",
+			"homeIconUrl":"./icons/home/home.svg",
+			"navigationLinks":[
+				{
+					"label": "Brand Diffusions",
+					"url": "/"
+				},
+				{
+					"label": "Demand Generations",
+					"url": "/"
+				},
+				{
+					"label": "Revenue Operations",
+					"url": "/"
+				}
+			]
+		}
+	,
 	"links": {
 		"serveLinks": [
 			{
-				"label": "Brand Diffusions",
-				"url": "/"
+				"label": "Company History",
+				"url": "/",
+				"icon":"./icons/services/company.svg"
 			},
 			{
-				"label": "Demand Generations",
-				"url": "/"
+				"label": "Service Capabilities",
+				"url": "/",
+				"icon":"./icons/services/services.svg"
 			},
 			{
-				"label": "Revenue Operations",
-				"url": "/"
+				"label": "Customer Success",
+				"url": "/",
+				"icon":"./icons/services/customer.svg"
+			},
+			{
+				"label": "Industries & Insights",
+				"url": "/",
+				"icon":"./icons/services/industries.svg"
+			},
+			{
+				"label": "Alliance Ecosystems",
+				"url": "/",
+				"icon":"./icons/services/Alliance.svg"
 			}
 		],
 		"ctrlLinks": [
@@ -59,4 +92,5 @@
 			}
 		]
 	}
+
 }

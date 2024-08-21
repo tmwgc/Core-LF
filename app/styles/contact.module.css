@@ -2,8 +2,8 @@
 	display: grid;
 	grid-auto-flow: column;
 	background-color: var(--primary-dark);
-	padding: 5px 32px;
 	align-items: center;
+	padding: 20px;
 	justify-content: space-between;
 }
 .content_tags {
@@ -12,7 +12,7 @@
 }
 .help_line {
 	display: flex;
-	gap: 16px;
+	gap: 8px;
 	justify-content: center;
 	align-items: center;
 }

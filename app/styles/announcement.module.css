@@ -3,13 +3,18 @@
 	align-items: center;
 	gap: 1rem;
 	justify-content: space-between;
-	padding: 12px 32px;
+	padding: 20px;
 }
-
+.paragraph{
+	margin: 0px;
+}
 .announcement {
 	min-height: 2rem;
 	background-color: white;
 	flex: 2;
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
 }
 .announcementIn {
 	display: flex;
