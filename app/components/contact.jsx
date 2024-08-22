@@ -28,19 +28,11 @@ const Contact = () => {
 				/>
 				<div className={styles.contact_number}>
 					<p
-						style={{
-							color: 'white',
-							fontSize: '13px',
-							margin: '0px',
-						}}>
+						className={styles.content_tags}>
 						Client Helpdesk
 					</p>
 					<p
-						style={{
-							color: 'white',
-							fontSize: '13px',
-							margin: '0px',
-						}}>
+						className={styles.content_tags}>
 						9677754778
 					</p>
 				</div>

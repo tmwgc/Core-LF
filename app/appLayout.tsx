@@ -1,7 +1,7 @@
 'use client';
 import React, { useEffect } from 'react';
 import { Head, Slick, Tail, Float, SplashScreen, Announcement, Contact, Nav } from './components';
-import Settings from './stores/settings.json';
+import Settings from '../public/stores/settings.json';
 import styles from './page.module.css';
 import './globals.css';
 import { useState } from 'react';
@@ -12,7 +12,7 @@ export default function AppLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const { brand, links, navigation } = Settings;
+  const { brand, navigation, announcement } = Settings;
   const [isSlickOn, setIsSlickOn] = useState(false);
 
   const menuHandler = () => {
@@ -25,7 +25,6 @@ export default function AppLayout({
   const [isLoading, setIsLoading] = useState(isHome);
 
   useEffect(() => {
-    console.log('isloading' + isLoading);
     if (isLoading) {
       return;
     }
@@ -38,14 +37,17 @@ export default function AppLayout({
       ) : (
         <>
           <div className={styles.headline}>
-            {/* Uncomment if needed */}
-            <Announcement />
+            <Announcement
+              title={announcement.title}
+              content={announcement.content}
+              icons={announcement.icons}
+            />
             <Contact />
             <Head menuHandler={menuHandler} logoPath={brand.logoPathColor} />
             <Nav homeLogo={navigation.homeIconUrl} />
           </div>
 
-          {isSlickOn && (
+          {/* {isSlickOn && (
             <Slick
               menuHandler={menuHandler}
               ctrlLinks={links.ctrlLinks}
@@ -53,9 +55,9 @@ export default function AppLayout({
             />
           )}
 
-          {/* {children} */}
+          {children}
 
-          <Tail activeIcon={'/'} ctrlLinks={links.ctrlLinks} />
+          <Tail activeIcon={'/'} ctrlLinks={links.ctrlLinks} /> */}
         </>
       )}
     </main>

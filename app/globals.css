@@ -8,11 +8,15 @@
     --active: #A5B3FF;
     --inactive: #5464B9;
 
-    --secondary-text: #656565
+    --secondary-text: #8F8F8F
 }
-
-body {
+*{
     margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    
     background-color: var(--canvas-board);
 }
 
@@ -33,7 +37,13 @@ body {
     border-radius: 1px;
 }
 
-a,
+a{
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+    line-height: 1;
+
+}
 p {
     color: var(--secondary-text);
     font-size: 15px;

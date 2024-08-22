@@ -1,75 +1,96 @@
 import styles from '../styles/announcement.module.css';
-import { GrAnnounce } from 'react-icons/gr';
-import { FiDownloadCloud, FiExternalLink } from 'react-icons/fi';
-import { FaX } from 'react-icons/fa6';
+import React, { useState, useEffect } from 'react';
+import volume from '../../public/icons/volume.svg';
+import Image from 'next/image';
 
-const announcement = () => {
+interface AnnouncementProps {
+  title: string;
+  content: string;
+  icons: {
+    download: {
+      label: string;
+      icon: string;
+    };
+    upload: {
+      label: string;
+      icon: string;
+    };
+    close: {
+      label: string;
+      icon: string;
+    };
+  };
+}
+const Announcement: React.FC<AnnouncementProps> = ({ title, content, icons }) => {
+  const [isClosed, setIsClosed] = useState(false);
+  const [announcementUpdatedAt, setAnnouncementUpdatedAt] = useState('');
+
+  useEffect(() => {
+    if (localStorage.getItem('announcementLastUpdated') != content) {
+      setAnnouncementUpdatedAt(content);
+      setIsClosed(true);
+      if (content == '') {
+        setIsClosed(false);
+      }
+    }
+  }, [content]);
+
+  const handleClose = () => {
+    localStorage.setItem('announcementLastUpdated', announcementUpdatedAt);
+    setIsClosed(false);
+  };
+
   return (
-    <div className={styles.main}>
-      <div className={styles.announcement}>
-        <div className={styles.announcementIn}>
-          <GrAnnounce size={30} color="lightgreen" />
-          <h1 className={styles.heading}>Get a free Audit now.</h1>
-        </div>
-        <div>
-          <p
-            className={styles.paragraph}
-            style={{
-              listStyle: 'none',
-              textDecoration: 'none',
-              placeSelf: 'center',
-              color: '#000E56',
-              fontSize: '13px',
-              textAlign: 'justify',
-            }}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloremque, et! Aspernatur
-          </p>
-        </div>
-        <div className={styles.announcementBtn}>
-          <div className={styles.links}>
-            <FiDownloadCloud />
-            <p
-              className={styles.paragraph}
-              style={{
-                listStyle: 'none',
-                textDecoration: 'none',
-                placeSelf: 'center',
-                color: '#000E56',
-                fontSize: '12px',
-              }}>
-              Download Circular
-            </p>
-          </div>
-          <div className={styles.links}>
-            <FiExternalLink />
-            <p
-              className={styles.paragraph}
-              style={{
-                listStyle: 'none',
-                textDecoration: 'none',
-                placeSelf: 'center',
-                color: '#000E56',
-                fontSize: '12px',
-              }}>
-              View Circular
-            </p>
-          </div>
-          <div className={styles.links}>
-            <FaX color="red" size={20} />
-            <p
-              style={{
-                listStyle: 'none',
-                textDecoration: 'none',
-                placeSelf: 'center',
-                fontSize: '12px',
-              }}>
-              Cancel
-            </p>
+    <div>
+      {isClosed ? (
+        <div className={styles.main}>
+          <div className={styles.announcement}>
+            <div className={styles.announcementIn}>
+              <Image className={styles.iconSize} src={volume} alt="alt" />
+              <h1 className={styles.heading}>{title}</h1>
+            </div>
+            <div className={styles.content}>
+              <p className={styles.announcementText}>{content}</p>
+              <div className={styles.announcementBtn}>
+                <div className={styles.links}>
+                  <Image
+                    className={styles.iconSize}
+                    src={icons.download.icon}
+                    alt="alt"
+                    width={18}
+                    height={18}
+                  />
+                  <p className={styles.paragraph}>{icons.download.label}</p>
+                </div>
+                <div className={styles.links}>
+                  <Image
+                    width={18}
+                    height={18}
+                    className={styles.iconSize}
+                    src={icons.upload.icon}
+                    alt="alt"
+                  />
+                  <p className={styles.paragraph}>{icons.upload.label}</p>
+                </div>
+                <div className={styles.links} onClick={handleClose}>
+                  <Image
+                    width={18}
+                    height={18}
+                    className={styles.iconSize}
+                    src={icons.close.icon}
+                    alt="alt"
+                  />
+                  <p className={styles.paragraph}>{icons.close.label}</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      ) : (
+        ''
+      )}
     </div>
   );
 };
 
-export default announcement;
+export default Announcement;

@@ -4,7 +4,7 @@ import styles from '../styles/nav.module.css';
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { Float, Services } from '../components';
-import Settings from '../stores/settings.json';
+import Settings from '../../public/stores/settings.json';
 
 interface NavProps {
   homeLogo: string; // Changed from URL['href'] to string

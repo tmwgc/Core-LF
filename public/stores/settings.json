@@ -15,8 +15,27 @@
 			"call": "/",
 			"audit": "/"
 		}
-	}
-	,"navigation":
+	},
+	"announcement":{
+		"title":"Get a free Audit now.",
+		"content":"We are excited to announce the launch of our metanet presales. The whitepaper is officially approved through community voting and the proposal has been ratified by 30K active voters. We thank you all for the overwhelmimg support and ",
+		"icons":{
+			"download":{
+				"label":"Download circular",
+				"icon":"./icons/announcement/download.svg"
+			},
+			"upload":{
+				"label":"visit website",
+				"icon":"./icons/announcement/upload.svg"
+			},
+			"close":{
+				"label":"Close",
+				"icon":"./icons/announcement/close.svg"
+			}
+
+		}
+	},
+	"navigation":
 		{
 			"label":"homeLogo",
 			"homeIconUrl":"./icons/home/home.svg",
