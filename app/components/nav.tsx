@@ -12,11 +12,10 @@ interface NavProps {
 
 const Nav: React.FC<NavProps> = ({ homeLogo }) => {
   const { links } = Settings;
-  const [serviceList, setServiceList] = useState(true); // Fixed useState usage
+  const [serviceList, setServiceList] = useState(false); // Fixed useState usage
 
   const handleServiceListToggle = () => {
     setServiceList((prevState) => !prevState);
-    console.log(serviceList);
   };
 
   return (
@@ -24,7 +23,7 @@ const Nav: React.FC<NavProps> = ({ homeLogo }) => {
       <div className={styles.main}>
         <div className={styles.homeIcon}>
           <Image
-            style={{ cursor: 'pointer', padding: '5px 0px' }}
+            style={{ cursor: 'pointer' }}
             src={homeLogo}
             alt="Home Logo"
             width={24}
@@ -38,7 +37,7 @@ const Nav: React.FC<NavProps> = ({ homeLogo }) => {
           className={`${styles.hamburgerIcon} ${serviceList ? '' : styles.hamburgerIconClick}`}
           onClick={handleServiceListToggle}>
           <Image
-            style={{ cursor: 'pointer', padding: '5px 0px' }}
+            style={{ cursor: 'pointer' }}
             src={'/icons/hamburger/right.svg'}
             alt="Hamburger Icon"
             width={24}
@@ -47,8 +46,8 @@ const Nav: React.FC<NavProps> = ({ homeLogo }) => {
         </div>
       </div>
       {serviceList ? (
-        <div>
-          <Services serveLinks={links.serveLinks} />
+        <div className={`${styles.servicesContainer} ${serviceList ? styles.show : styles.hide}`}>
+          {serviceList && <Services serveLinks={links.serveLinks} />}
         </div>
       ) : (
         ''

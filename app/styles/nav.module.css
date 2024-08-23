@@ -30,3 +30,30 @@
 .hamburgerIconClick{
     background-color: #ffffff;
 }
+
+/* animation list */
+
+/* Styles for the services container */
+.servicesContainer {
+    overflow: hidden; /* Ensure that content does not overflow */
+    white-space: nowrap; /* Prevent wrapping */
+    transition: transform 0.5s ease; /* Smooth transition for slide effect */
+    transform: translateX(-100%); /* Start position off-screen to the left */
+  }
+  
+  /* Show the services container */
+  .show {
+    transform: translateX(0); /* Move to visible position */
+  }
+  
+  /* Hide the services container */
+  .hide {
+    transform: translateX(-100%); /* Move off-screen to the left */
+  }
+/* media query */
+
+@media screen and (min-width:768px) {
+    .hamburgerIcon{
+        display: none;
+    }
+}

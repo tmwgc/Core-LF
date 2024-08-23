@@ -21,29 +21,34 @@ const Float: React.FC<FloatProps> = (props) => {
     setActiveLinkIndex(index);
   };
 
-  const renderLinks = linksToShow.map((link, i) => {
-    const isActive = i === activeLinkIndex; // Check if the current link is active
-
-    return (
-      <Link
-        className={`${styles.links} ${isActive ? styles.activeLink : ''}`}
-        style={{
-          listStyle: 'none',
-          textDecoration: 'none',
-          fontSize: '12px',
-        }}
-        key={i}
-        href={link.url}
-        onClick={() => handleClick(i)} // Set active link on click
-      >
-        {link.label.split(' ')[0]}
-        <br />
-        {link.label.split(' ')[1]}
-      </Link>
-    );
-  });
-
-  return <div className={styles.float}>{renderLinks}</div>;
+  return (
+    <>
+      <div className={styles.tabViewList}>
+        {serveLinks.map((link, i) => (
+          <Link
+            key={i}
+            href={link.url}
+            className={`${styles.links} ${i === activeLinkIndex ? styles.activeLink : ''}`}
+            onClick={() => handleClick(i)} // Set active link on click
+          >
+            {link.label}
+          </Link>
+        ))}
+      </div>
+      <div className={styles.mobileViewList}>
+        {linksToShow.map((link, i) => (
+          <Link
+            key={i}
+            href={link.url}
+            className={`${styles.links} ${i === activeLinkIndex ? styles.activeLink : ''}`}
+            onClick={() => handleClick(i)} // Set active link on click
+          >
+            {link.label}
+          </Link>
+        ))}
+      </div>
+    </>
+  );
 };
 
 export default Float;
