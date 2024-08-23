@@ -16,71 +16,68 @@
 			"audit": "/"
 		}
 	},
-	"announcement":{
-		"title":"Get a free Audit now.",
-		"content":"We are excited to announce the launch of our metanet presales. The whitepaper is officially approved through community voting and the proposal has been ratified by 30K active voters. We thank you all for the overwhelmimg support and ",
-		"icons":{
-			"download":{
-				"label":"Download circular",
-				"icon":"./icons/announcement/download.svg"
+	"announcement": {
+		"title": "Get a free Audit now.",
+		"content": "Provide us the relevant details and our audit team shall analyse your business’s digital presentence and deliver you a report of improvisation areas to worked out, to skyrocket your digital salkes",
+		"icons": {
+			"download": {
+				"label": "Download Circular",
+				"icon": "./icons/announcement/download.svg"
 			},
-			"upload":{
-				"label":"visit website",
-				"icon":"./icons/announcement/upload.svg"
+			"upload": {
+				"label": "Visit Website",
+				"icon": "./icons/announcement/upload.svg"
 			},
-			"close":{
-				"label":"Close",
-				"icon":"./icons/announcement/close.svg"
+			"close": {
+				"label": "Close",
+				"icon": "./icons/announcement/close.svg"
 			}
-
 		}
 	},
-	"navigation":
-		{
-			"label":"homeLogo",
-			"homeIconUrl":"./icons/home/home.svg",
-			"navigationLinks":[
-				{
-					"label": "Brand Diffusions",
-					"url": "/"
-				},
-				{
-					"label": "Demand Generations",
-					"url": "/"
-				},
-				{
-					"label": "Revenue Operations",
-					"url": "/"
-				}
-			]
-		}
-	,
+	"navigation": {
+		"label": "homeLogo",
+		"homeIconUrl": "./icons/home/home.svg",
+		"navigationLinks": [
+			{
+				"label": "Brand Diffusions",
+				"url": "/"
+			},
+			{
+				"label": "Demand Generations",
+				"url": "/"
+			},
+			{
+				"label": "Revenue Operations",
+				"url": "/"
+			}
+		]
+	},
 	"links": {
 		"serveLinks": [
 			{
 				"label": "Company History",
 				"url": "/",
-				"icon":"./icons/services/company.svg"
+				"icon": "./icons/services/company.svg"
 			},
 			{
 				"label": "Service Capabilities",
 				"url": "/",
-				"icon":"./icons/services/services.svg"
+				"icon": "./icons/services/services.svg"
 			},
 			{
 				"label": "Customer Success",
 				"url": "/",
-				"icon":"./icons/services/customer.svg"
+				"icon": "./icons/services/customer.svg"
 			},
 			{
 				"label": "Industries & Insights",
 				"url": "/",
-				"icon":"./icons/services/industries.svg"
+				"icon": "./icons/services/industries.svg"
 			},
 			{
 				"label": "Alliance Ecosystems",
 				"url": "/",
-				"icon":"./icons/services/Alliance.svg"
+				"icon": "./icons/services/Alliance.svg"
 			}
 		],
 		"ctrlLinks": [
@@ -111,5 +108,4 @@
 			}
 		]
 	}
-
 }

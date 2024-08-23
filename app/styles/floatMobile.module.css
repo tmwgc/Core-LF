@@ -6,7 +6,7 @@
 	box-shadow: 4px 4px 100px 0px rgba(160, 160, 160, 0.12);
 }
 .links {
-	padding: 30px;
+	padding: 20px;
 	position: relative;
 	font-size: 15px;
 	display: flex;
@@ -35,5 +35,20 @@
 }
 .tabViewList {
 	display: flex;
-	justify-content: center;
+	justify-content: space-between;
+}
+.mobileViewList {
+	display: none;
+}
+
+/* media query */
+
+@media screen and (max-width: 768px) {
+	.tabViewList {
+		display: none;
+	}
+	.mobileViewList {
+		display: flex;
+		justify-content: space-between;
+	}
 }
