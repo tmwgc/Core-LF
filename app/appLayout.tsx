@@ -1,6 +1,16 @@
 'use client';
 import React, { useEffect } from 'react';
-import { Head, Slick, Tail, Float, SplashScreen, Announcement, Contact, Nav } from './components';
+import {
+  Head,
+  Slick,
+  Tail,
+  Float,
+  SplashScreen,
+  Announcement,
+  Contact,
+  Nav,
+  Footer,
+} from './components';
 import Settings from '../public/stores/settings.json';
 import styles from './page.module.css';
 import './globals.css';
@@ -12,7 +22,7 @@ export default function AppLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const { brand, navigation, announcement } = Settings;
+  const { brand, navigation, announcement, links, footer } = Settings;
   const [isSlickOn, setIsSlickOn] = useState(false);
 
   const menuHandler = () => {
@@ -43,11 +53,15 @@ export default function AppLayout({
               icons={announcement.icons}
             />
             <Contact />
-            <Head menuHandler={menuHandler} logoPath={brand.logoPathColor} />
+            <Head
+              menuHandler={menuHandler}
+              logoPath={brand.logoPathColor}
+              homeLogo={navigation.homeIconUrl}
+            />
             <Nav homeLogo={navigation.homeIconUrl} />
           </div>
 
-          {/* {isSlickOn && (
+          {isSlickOn && (
             <Slick
               menuHandler={menuHandler}
               ctrlLinks={links.ctrlLinks}
@@ -55,9 +69,14 @@ export default function AppLayout({
             />
           )}
 
-          {children}
+          {/* {children} */}
 
-          <Tail activeIcon={'/'} ctrlLinks={links.ctrlLinks} /> */}
+          {/* <Tail activeIcon={'/'} ctrlLinks={links.ctrlLinks} /> */}
+          <Footer
+            copyrightContent={footer.copyright_max}
+            copyrightContentMin={footer.copyright_min}
+            label={footer.labels}
+          />
         </>
       )}
     </main>

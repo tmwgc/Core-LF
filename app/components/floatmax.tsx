@@ -15,9 +15,9 @@ interface FloatProps {
   }[];
 }
 
-const Float: React.FC<FloatProps> = (props) => {
+const FloatMax: React.FC<FloatProps> = (props) => {
   const { serveLinks = [] } = props;
-  const linksToShow = serveLinks.length > 3 ? serveLinks?.slice(0, 3) : serveLinks;
+  const linksToShow = serveLinks.length > 3 ? serveLinks?.slice(0, 5) : serveLinks;
 
   const [activeLinkIndex, setActiveLinkIndex] = useState<number | null>(0); // Default to index 1
 
@@ -45,8 +45,20 @@ const Float: React.FC<FloatProps> = (props) => {
           </div>
         ))}
       </div>
+      {/* <div className={styles.mobileViewList}>
+        {linksToShow.map((link, i) => (
+          <Link
+            key={i}
+            href={link.url}
+            className={`${styles.links} ${i === activeLinkIndex ? styles.activeLink : ''}`}
+            onClick={() => handleClick(i)} // Set active link on click
+          >
+            {link.label}
+          </Link>
+        ))}
+      </div> */}
     </>
   );
 };
 
-export default Float;
+export default FloatMax;

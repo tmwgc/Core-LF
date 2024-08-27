@@ -8,13 +8,16 @@
 }
 .content_tags {
 	color: white;
-	font-size: 16px;
+	font-size: 14px;
 }
-.help_line {
+.left{
 	display: flex;
-	gap: 8px;
-	justify-content: center;
-	align-items: center;
+	gap: 30px;
+}
+.right {
+	display: flex;
+    gap: 5px;
+    align-items: center;
 }
 .contact_number {
 	display: flex;

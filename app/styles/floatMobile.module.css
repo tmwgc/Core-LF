@@ -6,17 +6,12 @@
 	box-shadow: 4px 4px 100px 0px rgba(160, 160, 160, 0.12);
 }
 .links {
-	padding: 30px 5px;
+	padding: 20px;
 	position: relative;
 	font-size: 15px;
 	display: flex;
 	gap: 10px;
 	color: var(--secondary-text);
-}
-.linkWrapper{
-	display: flex;
-	align-items: center;
-	justify-content: center;
 }
 .arrowImg {
 	display: flex;
@@ -30,9 +25,9 @@
 	left: 0;
 	bottom: 0;
 	width: 0;
-	height: 2px;
-	background-color: var(--secondary-text);
-	transition: width 0.3s ease; 
+	height: 2px; /* Adjust height as needed */
+	background-color: #000e56; /* Color of the bottom border */
+	transition: width 0.3s ease; /* Smooth transition for hover effect */
 }
 
 .activeLink::after {
@@ -41,12 +36,19 @@
 .tabViewList {
 	display: flex;
 	justify-content: space-between;
-	flex: 1;
-	gap: 40px;
+}
+.mobileViewList {
+	display: none;
 }
 
-@media (max-width: 1024px) {
-	.links {
-		font-size: 14px;
+/* media query */
+
+@media screen and (max-width: 768px) {
+	.tabViewList {
+		display: none;
 	}
-  }
+	.mobileViewList {
+		display: flex;
+		justify-content: space-between;
+	}
+}

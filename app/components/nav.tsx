@@ -3,7 +3,7 @@
 import styles from '../styles/nav.module.css';
 import React, { useState } from 'react';
 import Image from 'next/image';
-import { Float, Services } from '../components';
+import { FloatMobile, Services } from '../components';
 import Settings from '../../public/stores/settings.json';
 
 interface NavProps {
@@ -31,7 +31,7 @@ const Nav: React.FC<NavProps> = ({ homeLogo }) => {
           />
         </div>
         <div className={styles.links}>
-          <Float serveLinks={links.serveLinks} />
+          <FloatMobile serveLinks={links.serveLinks} />
         </div>
         <div
           className={`${styles.hamburgerIcon} ${serviceList ? '' : styles.hamburgerIconClick}`}

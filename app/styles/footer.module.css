@@ -1,0 +1,48 @@
+.footer{
+    background-color: var(--primary-dark);
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+.itemLink{
+    color: white;
+}
+
+.items{
+    padding: 20px;
+    background-color: #001168;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.contenttext{
+    text-align: center;
+    color: white;
+    font-weight: 400;
+}
+.content{
+    padding: 20px;
+    background-color: #000E56;
+}
+.desktop{
+    display: block;
+}
+.mobile{
+    display: none;
+}
+/* media query */
+@media (max-width: 789px) {
+    .items{
+        font-size: 13px;
+    }
+    .contenttext{
+        font-size: 13px;
+    }
+	.desktop{
+        display: none;
+    }
+    .mobile{
+        display: block;
+    }
+  }
