@@ -18,7 +18,7 @@
 	},
 	"announcement": {
 		"title": "Get a free Audit now.",
-		"content": "Provide us the relevant details and our audit team shall analyse your business’s digital presentence and deliver you a report of improvisation areas to worked out, to skyrocket your digital salkes",
+		"content": "Provide us relevant details and our audit team shall analyse your business’s digital presentence and deliver you a report of improvisation areas to worked out, to skyrocket your digital salkes",
 		"icons": {
 			"download": {
 				"label": "Download Circular",
@@ -107,5 +107,18 @@
 				"icon": "insights"
 			}
 		]
+	},
+	"footer": {
+		"copyright_max": "Copyright © All Rights Reserved | The Madras Wallstreet Growth Consulting ® TMWGC | Incorporated as Dewallstreet Private Limited",
+		"copyright_min": "Copyright © All Rights Reserved | ® TMWGC",
+		"labels": [
+			"Privacy Policies",
+			"Terms of Services",
+			"Honor Codes",
+			"Legal Documents",
+			"Corporate Governance"
+		  ]
+		
 	}
+	
 }

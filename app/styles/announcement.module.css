@@ -26,7 +26,7 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	gap: 20px;
+	gap: 50px;
 }
 .announcement {
 	background-color: white;

@@ -44,6 +44,10 @@
 /* media query */
 
 @media screen and (max-width: 768px) {
+	.links {
+		font-size: 12px;
+		padding: 15px;
+	}
 	.tabViewList {
 		display: none;
 	}

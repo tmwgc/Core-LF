@@ -1,0 +1,287 @@
+/* .brandLogo {
+	width: 100%;
+	height: 60%;
+} */
+.brandLogoImg {
+	width: 150px;
+	height: 90px;
+}
+.footer {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+}
+.rightHeading {
+	color: var(--primary-dark);
+}
+.footerBottom {
+	background-color: var(--primary-dark);
+}
+.itemLink {
+	color: white;
+	font-size: 13px;
+}
+
+.items {
+	padding: 10px 20px;
+	background-color: #001168;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+.contenttext {
+	text-align: center;
+	color: white;
+	font-weight: 400;
+	font-size: 13px;
+}
+
+.content {
+	padding: 10px 20px;
+	background-color: #000e56;
+}
+.fontWightSm {
+	font-size: 12px;
+	font-weight: 600;
+	color: var(--primary-dark);
+}
+.fontWightSmColor {
+	color: var(--primary-dark);
+	font-size: 13px;
+}
+.fontWightMd {
+	font-size: 12px;
+	color: var(--primary-dark);
+	font-weight: 700;
+}
+.desktop {
+	display: block;
+}
+.mobile {
+	display: none;
+}
+.footerContent {
+	display: flex;
+	padding: 20px;
+	gap: 20px;
+	border-top: 1px solid var(--border-color);
+}
+.left {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	border-right: 1px solid var(--border-color);
+	gap: 15px;
+	flex: 0.3;
+}
+.right {
+	flex: 1;
+}
+.fontAddress0 {
+	padding: 20px 0px;
+}
+.socialMedia {
+	display: flex;
+	gap: 10px;
+	justify-content: center;
+	padding: 10px 0px;
+}
+.contact {
+	display: flex;
+	gap: 10px;
+	padding: 0px 10px;
+}
+.leftRight {
+	display: flex;
+}
+
+.details {
+	font-size: 12px;
+}
+.leftContent {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding-right: 10px;
+	border-right: 1px solid var(--border-color);
+}
+.number {
+	font-size: 12px;
+}
+.fontWeight {
+	font-size: 12px;
+}
+.rightRight {
+	display: flex;
+	flex-direction: column;
+	padding-left: 20px;
+	gap: 10px;
+	flex: 0.3;
+}
+.rightBottom {
+	display: flex;
+	padding-top: 10px;
+	gap: 20px;
+	justify-content: space-between;
+}
+.certification {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
+}
+.announcementMain {
+	display: none;
+}
+/* media query */
+@media (max-width: 789px) {
+	.footer {
+		position: relative;
+	}
+	.items {
+		font-size: 12px;
+		padding: 15px;
+	}
+	.content {
+		padding: 15px;
+	}
+	.contenttext {
+		font-size: 12px;
+	}
+	.desktop {
+		display: none;
+	}
+	.mobile {
+		display: block;
+	}
+	.brandLogoImg {
+		width: 150px;
+		height: 50px;
+	}
+	.fontWightSm {
+		font-size: 10px;
+	}
+	.fontWightMd {
+		font-size: 10px;
+	}
+	.left {
+		flex-direction: row;
+		border: none;
+		padding: 10px 0px;
+	}
+	.logo {
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 10px;
+	}
+	.logoContent {
+		display: flex;
+		flex: 1;
+		flex-direction: column-reverse;
+		justify-content: center;
+		align-items: center;
+		border-left: 1px solid var(--border-color);
+	}
+	.footerContent {
+		display: block;
+		padding: 10px 20px;
+	}
+	.right {
+		display: flex;
+		padding: 10px 0px;
+		border-top: 1px solid var(--border-color);
+	}
+	.leftContent {
+		display: flex;
+		padding: 10px 0px;
+		border: none;
+		border-top: 1px solid var(--border-color);
+		border-bottom: 1px solid var(--border-color);
+	}
+	.fontWightSmColor {
+		font-size: 10px;
+	}
+	.announcementHead {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding-bottom: 20px;
+		padding-top: 10px;
+	}
+
+	.announcementCertification {
+		display: flex;
+		padding: 10px 0px;
+	}
+	.announcementHeadPhara {
+		font-size: 9px;
+		color: #516dff;
+	}
+	.announcementMain {
+		display: block;
+	}
+	.announcement {
+		padding: 20px;
+		border-radius: 10px;
+		background-color: #000e56;
+	}
+	.announcemetDiv {
+		display: flex;
+		gap: 10px;
+	}
+	.announcementText {
+		color: white;
+		font-size: 10px;
+		font-weight: 400;
+	}
+	.rightBottom {
+		display: none;
+	}
+	.socialMediaIcons {
+		width: 20px;
+		height: 20px;
+	}
+	.contact {
+		display: block;
+		padding: 10px 0px;
+	}
+	.rightRight {
+		flex-direction: row;
+		flex: 1;
+		padding-bottom: 10px;
+	}
+	.fontWeight {
+		font-size: 9px;
+	}
+	.rightHeading {
+		font-size: 12px;
+		display: flex;
+		align-items: center;
+		flex: 0.1;
+		padding-right: 15px;
+		border-right: 1px solid var(--border-color);
+	}
+	.numberDiv {
+		display: flex;
+		flex: 1;
+		gap: 10px;
+		justify-content: space-between;
+	}
+	.number {
+		font-size: 9px;
+		color: #616161;
+	}
+	.leftRight {
+		display: flex;
+		flex-direction: column-reverse;
+	}
+
+	.details {
+		font-size: 8px;
+	}
+}

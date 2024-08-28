@@ -1,5 +1,5 @@
 .main {
-	display: flex;
+	display: none;
 	background-color: white;
 	padding: 0px 0px 0px 20px;
 	gap: 10px;
@@ -27,27 +27,24 @@
 	background-color: #ffffff;
 	padding: 0 20px;
 }
-
-/* animation list */
-
-/* Styles for the services container */
 .servicesContainer {
-	overflow: hidden; /* Ensure that content does not overflow */
-	white-space: nowrap; /* Prevent wrapping */
-	transition: transform 0.5s ease; /* Smooth transition for slide effect */
-	/* transform: translateX(-100%); */
+	position: absolute;
+	width: 100%;
+	z-index: 1;
 }
 
-/* Show the services container */
-.show {
-	transform: translateX(0); /* Move to visible position */
-}
-
-/* Hide the services container */
-.hide {
-	transform: translateX(-100%); /* Move off-screen to the left */
-}
 /* media query */
 
-@media screen and (min-width: 768px) {
+@media screen and (max-width: 769px) {
+	.hamburgerIcon {
+		display: flex;
+	}
+	.main {
+		display: flex;
+	}
+}
+@media screen and (min-width: 770px) {
+	.servicesContainer {
+		display: none;
+	}
 }

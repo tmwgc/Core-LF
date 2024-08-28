@@ -14,10 +14,32 @@ const Contact = () => {
 
 	return (
 		<div className={styles.head}>
-			<p className={styles.content_tags}>Investor Relations</p>
-			<p className={styles.content_tags}>Press Releases</p>
+			<div className={styles.left}>
+				<div className={styles.right}>
+					<Image
+						style={{ cursor: 'pointer' }}
+						onClick={callHandler}
+						src={'/icons/access/user.svg'}
+						alt='alt'
+						width={26}
+						height={26}
+					/>
+					<p className={styles.content_tags}>Investor Relations</p>
+				</div>
+				<div className={styles.right}>
+					<Image
+						style={{ cursor: 'pointer' }}
+						onClick={callHandler}
+						src={'/icons/access/feather.svg'}
+						alt='alt'
+						width={26}
+						height={26}
+					/>
+					<p className={styles.content_tags}>Press Releases</p>
+				</div>
+			</div>
 
-			<div className={styles.help_line}>
+			<div className={styles.right}>
 				<Image
 					style={{ cursor: 'pointer' }}
 					onClick={callHandler}

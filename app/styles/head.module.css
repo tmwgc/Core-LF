@@ -1,6 +1,5 @@
 .head {
 	display: flex;
-	grid-auto-flow: column;
 	background-color: white;
 	padding: 0px 20px;
 	align-items: center;
@@ -13,12 +12,19 @@
 	flex: 1;
 	gap: 20px;
 }
-.left,
 .right {
 	display: flex;
-	justify-content: center;
+	justify-content: end;
 	align-items: center;
-	gap: 20px;
+	gap: 50px;
+	flex: 0.3;
+}
+.left {
+	display: flex;
+	justify-content: start;
+	align-items: center;
+	gap: 50px;
+	flex: 0.3;
 }
 .access {
 	display: flex;
@@ -30,14 +36,55 @@
 	padding: 15px;
 	margin: auto;
 }
+.max{
+	display: block;
+	flex: 1;
+}
+.med{
+	display: none;
+}
+.mobile{
+	display: none;
+}
 
-/* mdeia query */
-
-@media screen and (max-width: 769px) {
+/* Media query for screens with a maximum width of 1024px */
+@media (max-width: 1024px) {
+	.max {
+	  display: none;
+	}
+	.med {
+	  display: flex;
+	}
+	.mobile {
+	  display: none;
+	}
+	.left {
+		gap: 20px;
+	}
+	.right {
+		gap: 20px;
+	}
+  }
+  
+  /* Media query for screens with a maximum width of 768px */
+  @media (max-width: 769px) {
 	.head {
 		padding: 20px 20px;
 	}
 	.list {
 		display: none;
 	}
-}
+	.rightBtn{
+		display: none;
+	}
+	
+	.max {
+	  display: none;
+	}
+	.med {
+	  display: none;
+	}
+	.mobile {
+	  display: flex;
+	}
+  }

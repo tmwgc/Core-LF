@@ -18,7 +18,7 @@ interface FloatProps {
 const Float: React.FC<FloatProps> = (props) => {
 	const { serveLinks = [] } = props
 	const linksToShow =
-		serveLinks.length > 3 ? serveLinks?.slice(0, 4) : serveLinks
+		serveLinks.length > 3 ? serveLinks?.slice(0, 3) : serveLinks
 
 	const [activeLinkIndex, setActiveLinkIndex] = useState<number | null>(0) // Default to index 1
 
@@ -41,23 +41,11 @@ const Float: React.FC<FloatProps> = (props) => {
 							width={24}
 							height={24}
 							src={i === activeLinkIndex ? downIcon : upIcon}
-							alt={i === activeLinkIndex ? 'Down icon' : 'Up icon'}
+							alt={i === activeLinkIndex ? 'Up icon' : 'Down icon'}
 						/>
 					</div>
 				))}
 			</div>
-			{/* <div className={styles.mobileViewList}>
-        {linksToShow.map((link, i) => (
-          <Link
-            key={i}
-            href={link.url}
-            className={`${styles.links} ${i === activeLinkIndex ? styles.activeLink : ''}`}
-            onClick={() => handleClick(i)} // Set active link on click
-          >
-            {link.label}
-          </Link>
-        ))}
-      </div> */}
 		</>
 	)
 }
