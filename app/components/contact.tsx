@@ -8,7 +8,7 @@ const Contact = () => {
 		window.location.href = 'tel:+91 8122801215'
 	}
 
-	const logoHandler = () => {
+	const logoHandler = (router:any) => {
 		router.replace('/')
 	}
 

@@ -13,19 +13,6 @@ interface SplashProps {
 const SplashScreen: React.FC<SplashProps> = (props) => {
   const { logoPath, finishLoading } = props;
   const [isMounted, setIsMounted] = useState(false);
-  // const animate = () => {
-  //   const loader = anime.timeline({
-  //     complete: () => finishLoading(),
-  //   });
-  //   loader.add({
-  //     targets: '#logo',
-  //     delay: 0,
-  //     scale: 1,
-  //     duration: 1500,
-  //     easing: 'easeInOutExpo',
-  //   });
-  // };
-
   useEffect(() => {
     const timeOut = setTimeout(() => {
       setIsMounted(true);

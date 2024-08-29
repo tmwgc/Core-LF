@@ -6,7 +6,7 @@ import FloatMobile from './floatMobile';
 
 import SplashScreen from './splashscreen';
 import Announcement from './announcement';
-import Contact from './Contact';
+import Contact from './contact';
 import Nav from './nav';
 import Services from './services';
 import NavList from './navList';
