@@ -26,7 +26,7 @@
 	bottom: 0;
 	width: 0;
 	height: 2px; /* Adjust height as needed */
-	background-color: #000e56; /* Color of the bottom border */
+	background-color: var(--border-color); /* Color of the bottom border */
 	transition: width 0.3s ease; /* Smooth transition for hover effect */
 }
 

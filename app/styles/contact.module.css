@@ -1,4 +1,4 @@
-.head {
+.content {
 	display: grid;
 	grid-auto-flow: column;
 	background-color: var(--primary-dark);
@@ -29,7 +29,17 @@
 
 /* media query  */
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 769px) and (min-width: 426px) {
+	.content_tags
+	{
+		font-size: 12px;
+	}
+}
+@media screen and (max-width: 425px) {
+	.left{
+		display: flex;
+		gap: 5px;
+	}
 	.content_tags
 	{
 		font-size: 12px;

@@ -4,7 +4,7 @@ import Image from 'next/image';
 import { URL } from 'url';
 import styles from '../styles/head.module.css';
 import { useRouter } from 'next/navigation';
-import { Float, FloatMax, FloatMobile } from '../components';
+import { Float } from '../components';
 import Settings from '../../public/stores/settings.json';
 
 interface HeadProps {
@@ -12,10 +12,12 @@ interface HeadProps {
   links?: [];
   menuHandler?: any;
   homeLogo: string;
+  quotes: string;
+  breakAfter: string;
 }
 
 const Head: React.FC<HeadProps> = (props) => {
-  const { logoPath, menuHandler, homeLogo } = props;
+  const { logoPath, menuHandler } = props;
   const { links } = Settings;
 
   const router = useRouter();
@@ -36,12 +38,13 @@ const Head: React.FC<HeadProps> = (props) => {
           onClick={menuHandler}
           src={'/icons/hamburger/color.svg'}
           alt="alt"
-          width={24}
-          height={24}
+          width={20}
+          height={20}
         />
         <Image
           onClick={logoHandler}
           style={{ cursor: 'pointer' }}
+          className="mainLogo"
           src={logoPath}
           alt="alt"
           width={142}
@@ -49,19 +52,13 @@ const Head: React.FC<HeadProps> = (props) => {
         />
       </div>
       <div className={styles.list}>
-        <div className={styles.max}>
-          <FloatMax serveLinks={links.serveLinks} />
-        </div>
-        <div className={styles.med}>
-          <Float serveLinks={links.serveLinks} />
-        </div>
-        <div className={styles.mobile}>
-          <FloatMobile serveLinks={links.serveLinks} />
+        <div className={styles.float}>
+          <Float link={links.NavigationLinks} />
         </div>
       </div>
       <div className={styles.right}>
         <div className={styles.rightBtn}>
-          <button className={styles.btn}>Become a Client</button>
+          <button className={styles.btn}>Enroll Now</button>
         </div>
         <div className={styles.access}>
           <Image

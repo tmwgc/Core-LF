@@ -46,7 +46,7 @@
 	justify-content: space-between;
 	align-items: center;
 	gap: 20px;
-	flex: 0.5;
+	flex: 0.7;
 }
 .links {
 	display: flex;

@@ -1,20 +1,19 @@
 'use client';
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import {
   Head,
   Slick,
-  Tail,
   Float,
   SplashScreen,
   Announcement,
   Contact,
   Nav,
   Footer,
+  Video,
 } from './components';
 import Settings from '../public/stores/settings.json';
 import styles from './page.module.css';
 import './globals.css';
-import { useState } from 'react';
 import { usePathname } from 'next/navigation';
 
 export default function AppLayout({
@@ -22,14 +21,12 @@ export default function AppLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const { brand, navigation, announcement, links, footer } = Settings;
+  const { brand, Mobilenavigation, announcement, links, footer } = Settings;
   const [isSlickOn, setIsSlickOn] = useState(false);
-
   const menuHandler = () => {
     setIsSlickOn(!isSlickOn);
   };
 
-  // splash screen
   const pathname = usePathname();
   const isHome = pathname === '/';
   const [isLoading, setIsLoading] = useState(isHome);
@@ -56,9 +53,11 @@ export default function AppLayout({
             <Head
               menuHandler={menuHandler}
               logoPath={brand.logoPathColor}
-              homeLogo={navigation.homeIconUrl}
+              quotes={brand.quotes}
+              breakAfter={brand.breakAfter}
+              homeLogo={Mobilenavigation.homeIconUrl}
             />
-            <Nav homeLogo={navigation.homeIconUrl} />
+            <Nav homeLogo={Mobilenavigation.homeIconUrl} />
           </div>
 
           {isSlickOn && (
@@ -69,13 +68,20 @@ export default function AppLayout({
             />
           )}
 
-          {/* {children} */}
-
-          {/* <Tail activeIcon={'/'} ctrlLinks={links.ctrlLinks} /> */}
+          {children}
+          {/* <Video /> */}
           <Footer
-            copyrightContent={footer.copyright_max}
-            copyrightContentMin={footer.copyright_min}
-            label={footer.labels}
+            brandLogo={footer.brandLogo}
+            copyright_max={footer.copyright_max}
+            copyright_min={footer.copyright_min}
+            labels={footer.labels}
+            address={footer.address}
+            pincode={footer.pincode}
+            InstituteName={footer.InstituteName}
+            InstituteDiscription={footer.Institute_discription}
+            InstituteDetails={footer.Institute_details}
+            license_informations={footer.license_informations}
+            certification={footer.certification}
           />
         </>
       )}

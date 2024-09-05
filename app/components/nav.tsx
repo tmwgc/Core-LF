@@ -31,7 +31,7 @@ const Nav: React.FC<NavProps> = ({ homeLogo }) => {
           />
         </div>
         <div className={styles.links}>
-          <FloatMobile serveLinks={links.serveLinks} />
+          <FloatMobile serveLinks={links.NavigationLinks} />
         </div>
         <div
           className={`${styles.hamburgerIcon} ${serviceList ? '' : styles.hamburgerIconClick}`}
@@ -47,11 +47,12 @@ const Nav: React.FC<NavProps> = ({ homeLogo }) => {
       </div>
       {serviceList ? (
         <div className={`${styles.servicesContainer} ${serviceList ? styles.show : styles.hide}`}>
-          {serviceList && <Services serveLinks={links.serveLinks} />}
+          {serviceList && <Services serveLinks={links.NavigationLinks} />}
         </div>
       ) : (
         ''
       )}
+      <div className={`${serviceList ? styles.blackScreenVisible : ''}`}></div>
     </>
   );
 };

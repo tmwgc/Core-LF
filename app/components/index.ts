@@ -9,9 +9,11 @@ import Announcement from './announcement';
 import Contact from './contact';
 import Nav from './nav';
 import Services from './services';
-import NavList from './navList';
 import FloatMax from './floatmax';
 import Footer from './footer';
+import Video from './video';
+
+import ServiceCapabilities from './serviceCapabilities';
 
 export {
   Head,
@@ -25,6 +27,7 @@ export {
   Contact,
   Nav,
   Services,
-  NavList,
   Footer,
+  Video,
+  ServiceCapabilities,
 };
