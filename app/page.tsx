@@ -4,7 +4,7 @@ import styles from './page.module.css';
 import Image from 'next/image';
 import './globals.css';
 import Settings from '../public/stores/settings.json';
-import { ServiceCapabilities } from './components';
+import { ServiceCapabilities, AdvertisementBar, MainServices } from './components';
 // Define the type for each certification item
 interface CertificationItem {
   label: string;
@@ -56,9 +56,11 @@ const Home: React.FC = () => {
   );
 
   const renderSlick = (
-    <div>
+    <div className={styles.contentPage}>
       <main className={styles.contant}>{renderContent}</main>
       <ServiceCapabilities />
+      <AdvertisementBar />
+      <MainServices />
     </div>
   );
 

@@ -1,0 +1,119 @@
+.mainServices{
+    width: 100%;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+.container {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    position: relative;
+    padding: 0 20px;
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px; /* Adjust thickness of the border */
+    background-color: var(--border-color); /* Border color */
+    transform: translateX(-50%);
+}
+.flexBox::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px; /* Adjust thickness of the border */
+    background-color: var(--border-color); /* Border color */
+    transform: translateX(-50%);
+}
+.mainGridBox{
+    display: flex;
+    padding: 0 20px;
+    justify-content: center;
+}
+.ListImg{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.bottomDiv{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.bottomDiv{
+    padding: 20px 20px 20px 0px;
+    border-bottom: 1px solid var(--border-color);
+}
+.bottomContent{
+    padding: 0 20px;
+    border-right: 1px solid var(--border-color);
+}
+.centerDiv{
+    border-bottom: 1px solid var(--border-color);
+    padding: 20px 0;
+}
+
+.contentGridBox {
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+    position: relative;
+}
+.contentRowGridBox:not(:first-child)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0; /* Adjust as needed */
+    width: 1px; /* Border thickness */
+    background-color: var(--border-color); /* Border color */
+}
+
+.contentRowGridBox{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 20px;
+    position: relative;
+}
+.articleFlexBox{
+    display: flex;
+}
+
+.bottomFlexBox{
+    display: flex;
+}
+.mainFlexBox {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 10px; /* Optional: Add padding to each box if needed */
+}
+.flexBox{
+    display: flex;
+    gap: 10px;
+    position: relative;
+}
+.contentFlexBox{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+}
+.heading{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    padding: 0 10px;
+}
+.serviceDiv{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}

@@ -1,16 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import {
-  Head,
-  Slick,
-  Float,
-  SplashScreen,
-  Announcement,
-  Contact,
-  Nav,
-  Footer,
-  Video,
-} from './components';
+import { Head, Slick, Float, SplashScreen, Announcement, Contact, Nav, Footer } from './components';
 import Settings from '../public/stores/settings.json';
 import styles from './page.module.css';
 import './globals.css';
@@ -69,7 +59,6 @@ export default function AppLayout({
           )}
 
           {children}
-          {/* <Video /> */}
           <Footer
             brandLogo={footer.brandLogo}
             copyright_max={footer.copyright_max}

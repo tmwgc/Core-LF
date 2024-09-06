@@ -11,7 +11,8 @@ import Nav from './nav';
 import Services from './services';
 import FloatMax from './floatmax';
 import Footer from './footer';
-import Video from './video';
+import AdvertisementBar from './advertisementBar';
+import MainServices from './mainServices';
 
 import ServiceCapabilities from './serviceCapabilities';
 
@@ -28,6 +29,7 @@ export {
   Nav,
   Services,
   Footer,
-  Video,
+  AdvertisementBar,
   ServiceCapabilities,
+  MainServices,
 };
