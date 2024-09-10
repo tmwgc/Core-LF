@@ -14,7 +14,7 @@
 	height: 10px;
 	border: none;
 	border-radius: 100%;
-	background-color: var(--active);
+	background-color: var(--primary-dark);
 }
 .loader {
 	display: flex;
@@ -23,7 +23,7 @@
 .dot {
 	width: 10px;
 	height: 10px;
-	background-color: var(--active);
+	background-color: var(--primary-dark);
 	border-radius: 100%;
 	animation: bounce 0.5s infinite alternate;
 }

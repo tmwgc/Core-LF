@@ -45,12 +45,17 @@
 }
 .tabViewList {
   display: flex;
-  justify-content: space-between;
-  gap: 30px;
+  justify-content: space-evenly;
+  gap: 10px;
+}
+.links {
+  font-size: 15px;
 }
 
-@media (max-width: 1024px) {
-  .links {
-    font-size: 12px;
+@media (min-width: 1441px) {
+  .tabViewList {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
   }
 }

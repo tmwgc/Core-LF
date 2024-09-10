@@ -57,10 +57,10 @@ const Home: React.FC = () => {
 
   const renderSlick = (
     <div className={styles.contentPage}>
-      <main className={styles.contant}>{renderContent}</main>
+      {/* <main className={styles.contant}>{renderContent}</main>
       <ServiceCapabilities />
       <AdvertisementBar />
-      <MainServices />
+      <MainServices /> */}
     </div>
   );
 

@@ -5,10 +5,12 @@
   justify-content: center;
   align-items: center;
 }
-/* .contentPage{
+.contentPage{
   width: 90%;
   margin: auto;
-} */
+  height: 100vh;
+
+}
 .hero{
   text-align: center;
   display: flex;

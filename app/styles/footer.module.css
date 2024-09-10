@@ -12,9 +12,14 @@
 }
 .itemLink {
   color: white;
-  font-size: 13px;
+  font-size: 14px;
 }
-
+.contenttext {
+  text-align: center;
+  color: white;
+  font-weight: 400;
+  font-size: 14px;
+}
 .items {
   padding: 20px;
   background-color: var(--bottom-bar-1);
@@ -22,25 +27,20 @@
   align-items: center;
   justify-content: space-around;
 }
-.contenttext {
-  text-align: center;
-  color: white;
-  font-weight: 400;
-  font-size: 13px;
-}
+
 
 .content {
   padding: 20px;
   background-color: var(--bottom-bar-2);
 }
 .fontWightSm {
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 600;
   color: var(--dark);
 }
 .fontWightSmColor {
   color: var(--primary-blue);
-  font-size: 11px;
+  font-size: 14px;
 }
 .fontWightMd {
   font-size: 16px;
@@ -55,7 +55,7 @@
 }
 .footerContent {
   display: flex;
-  padding: 20px;
+  padding: 20px 40px;
   gap: 20px;
   border-top: 1px solid var(--border-color-white);
 }
@@ -66,7 +66,7 @@
   justify-content: center;
   border-right: 1px solid var(--border-color-white);
   gap: 15px;
-  flex: 0.3;
+  padding-right: 10px;
 }
 .right {
   flex: 1;
@@ -90,7 +90,7 @@
 }
 
 .details {
-  font-size: 12px;
+  font-size: 14px;
 }
 .leftContent {
   flex: 1;
@@ -101,11 +101,11 @@
   border-right: 1px solid var(--border-color-white);
 }
 .number {
-  font-size: 12px;
+  font-size: 13px;
   color: var(--light-dark);
 }
 .fontWeight {
-  font-size: 12px;
+  font-size: 13px;
 }
 .rightRight {
   display: flex;
@@ -123,7 +123,6 @@
 .certification {
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 10px;
   flex: 1;
 }
@@ -131,9 +130,9 @@
   display: none;
 }
 .fontWight {
-  color: var(--dark);
+  color: var(--primary-dark);
   font-weight: 600;
-  font-size: 14px;
+  font-size: 15px;
 }
 .breakLine {
   display: block;
@@ -150,6 +149,7 @@
   display: flex;
   flex-direction: column;
   gap: 10px;
+  flex: 1;
 }
 .logo {
   display: flex;
@@ -159,6 +159,7 @@
   padding: 0 10px;
 }
 .certificationLinks {
+  flex: 1;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -167,9 +168,21 @@
   font-size: 19px;
   color: var(--dark);
 }
+.certificationContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.certificationImgDiv{
+  position: relative;
+  flex: 0.15;
+  display: flex;
+  align-items: end;
+  justify-content: end;
+}
 /* media query */
 
-@media (max-width: 789px) {
+@media (max-width: 789px) and (min-width:426px) {
   .footer {
     position: relative;
   }
@@ -182,27 +195,20 @@
     flex: 1;
   }
   .items {
-    font-size: 12px;
     padding: 15px;
   }
   .content {
     padding: 15px;
   }
-  .contenttext {
-    font-size: 12px;
-  }
+  
   .desktop {
     display: none;
   }
   .mobile {
     display: block;
   }
-  /* .brandLogoImg {
-    width: 150px;
-    height: 50px;
-  } */
   .fontWightSm {
-    font-size: 10px;
+    font-size: 14px;
     color: var(--secondary-text);
   }
   .breakLine {
@@ -236,11 +242,12 @@
   }
   .footerContent {
     display: block;
-    padding: 10px 20px;
   }
   .certificationImg{
-    width: 60px;
-    height: 60px;
+    position: absolute;
+    top: -40px;
+    width: 80px;
+    height: 80px;
   }
   .right {
     display: flex;
@@ -270,36 +277,33 @@
     padding: 10px 0px;
   }
   .announcementHeadPhara {
-    font-size: 12px;
     color: var(--primary-blue);
+    font-size: 14px;
   }
   .announcementMain {
     display: block;
   }
   .announcement {
-    /* padding: 20px; */
+    margin: 10px 0;
     border-radius: 10px;
-    border: 1px solid #cfd7ff;
+    border: 2px solid #cfd7ff;
   }
   .announcemetDiv {
+    padding: 10px;
     display: flex;
     gap: 10px;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
   }
   .announcementText {
     color: var(--primary-blue);
-    font-size: 12px;
     margin: auto 0;
+    font-size: 14px;
   }
 
   .rightBottom {
     display: none;
   }
-  /* .socialMediaIcons {
-    width: 20px;
-    height: 20px;
-  } */
   .contact {
     display: flex;
     padding: 10px 0px;
@@ -311,11 +315,7 @@
     flex: 1;
     padding-bottom: 10px;
   }
-  .fontWeight {
-    font-size: 10px;
-  }
   .rightHeading {
-    font-size: 12px;
     display: flex;
     align-items: center;
     flex: 0.1;
@@ -323,15 +323,13 @@
     border-right: 1px solid var(--border-color-white);
   }
   .numberDiv {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto;
     flex: 1;
     gap: 10px;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    align-items: center;
   }
   .number {
-    font-size: 11px;
     color: #616161;
   }
   .leftRight {
@@ -339,13 +337,160 @@
     flex-direction: column-reverse;
   }
   .brandName {
-    font-size: 16px;
     color: var(--dark);
   }
   .fontWight {
-    font-size: 12px;
   }
   .details {
+  }
+}
+@media screen and (max-width:425px) {
+  .footerContent{
+    display: block;
+    padding: 10px 20px;
+  }
+  .brandLogoImg {
+    width: 130px;
+    height: 85px;
+  }
+  .numberDiv {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .socialMediaIcons{
+    width: 25px;
+    height: 25px;
+  }
+  .announcemetDiv {
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+  .announcementHeadPhara {
+    color: var(--primary-blue);
     font-size: 12px;
+  }
+  .left {
+      flex-direction: row;
+      border: none;
+      gap: 0px;
+      padding: 10px 0px;
+  }
+  .leftContent {
+      display: flex;
+      padding: 10px 0px;
+      border: none;
+      border-top: 1px solid var(--border-color-white);
+      border-bottom: 1px solid var(--border-color-white);
+  }  
+  .right {
+    display: flex;
+    padding: 10px 0px;
+    border-top: 1px solid var(--border-color-white);
+  }
+  .leftRight {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .logoContent{
+      display: flex;
+      flex: 1 1;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center;
+      padding-left: 10px;
+      border-left: 1px solid var(--border-color-white);
+  }
+  .fontWightSm{
+    font-size: 12px;
+  }
+  .contact{
+      display: flex;
+      padding: 10px 0px;
+      flex-direction: column;
+      align-items: center;
+  }
+  .rightBottom {
+    display: none;
+  }
+  .licenseLabel{
+    margin: auto;
+    flex: 1;
+  }
+  .announcementMain{
+      display: block;
+  }
+  .announcement {
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 2px solid #cfd7ff;
+  }
+  .announcementHead{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 15px;
+      padding-top: 5px;
+  }
+  .announcementText {
+    color: var(--primary-blue);
+    margin: auto 0;
+    font-size: 12px;
+  }
+  .rightRight {
+    display: grid;
+    gap: 10px;
+    padding-left: 0px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+  }
+  .fontWight{
+    font-size: 13px;
+  }
+  .fontWeight,.number, .details{
+    font-size: 12px;
+  }
+  .brandName{
+    font-size: 16px;
+  }
+  .desktop {
+    display: none;
+  }
+  .mobile {
+    display: block;
+  }
+  .itemLink {
+    color: white;
+    font-size: 12px;
+  }
+  .contenttext {
+    text-align: center;
+    color: white;
+    font-weight: 400;
+    font-size: 12px;
+  }
+  .certificationImgDiv{
+    flex: 0.3;
+  }
+  .certificationImg{
+    position: absolute;
+    top: -40px;
+    width: 80px;
+    height: 80px;
+  }
+}
+@media screen and (max-width:375px) {
+  .numberDiv {
+    grid-template-columns: auto ;
+  }
+}
+@media screen and (max-width:1439px) and (min-width:790px) {
+  .footerContent{
+    padding: 20px;
   }
 }

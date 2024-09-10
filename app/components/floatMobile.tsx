@@ -24,6 +24,18 @@ const FloatMobile: React.FC<FloatPropsMobile> = (props) => {
   return (
     <>
       <div className={styles.mobileViewList}>
+        {serveLinks.map((link, i) => (
+          <Link
+            key={i}
+            href={link.url}
+            className={`${styles.links} ${i === activeLinkIndex ? styles.activeLink : ''}`}
+            onClick={() => handleClick(i)} // Set active link on click
+          >
+            {link.label}
+          </Link>
+        ))}
+      </div>
+      <div className={styles.SmMobileViewList}>
         {linksToShow.map((link, i) => (
           <Link
             key={i}

@@ -4,7 +4,7 @@
 	align-items: center;
 	gap: 20px;
 	justify-content: space-between;
-	padding: 20px;
+	padding: 20px 40px;
 }
 .heading {
 	font-size: 18px;
@@ -19,6 +19,8 @@
 
 .announcementText {
 	text-align: justify;
+	display: flex;
+	align-items: center;
 	font-size: 16px;
 	flex: 1;
 }
@@ -94,7 +96,7 @@
 
 /* media query */
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 769px) and (min-width:426px) {
 	.content {
 		display: flex;
 		flex-direction: column;
@@ -120,5 +122,45 @@
 	}
 	.cancelIconInside {
 		display: none;
+	}
+}
+@media screen and (max-width:425px) {
+	.main{
+		padding: 20px;
+	}
+	.content {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+	}
+	.iconSize {
+		width: 20px;
+		height: 20px;
+	}
+	.cancelBtn {
+		width: 24px;
+		height: 24px;
+	}
+	.links {
+		gap: 10px;
+	}
+	.paragraph {
+		font-size: 11px;
+		font-weight: 600;
+	}
+	.announcementText {
+		font-size: 12px;
+	}
+
+	.cancelIcon {
+		display: flex;
+	}
+	.cancelIconInside {
+		display: none;
+	}
+}
+@media screen and (min-width:1440px) {
+	.announcementBtn {
+		flex: 0.4;
 	}
 }

@@ -55,25 +55,29 @@ const Slick: React.FC<SlickProps> = (props) => {
   });
 
   const renderSlick = (
-    <div className={styles.slick}>
-      <div className={styles.title}>
-        <Image
-          style={{ cursor: 'pointer' }}
-          onClick={logoHandler}
-          src={logoPath}
-          alt="alt"
-          width={150}
-          height={100}
-        />
-        <div style={{ cursor: 'pointer' }} onClick={menuHandler} className={styles.closer}>
-          <Image src={'/icons/announcement/close.svg'} alt="alt" width={24} height={24} />
-          <p style={{ color: 'white', fontSize: '12px', margin: '0px' }}>Close</p>
-        </div>
-      </div>
-      {renderLinks}
+    <>
+      <div className={styles.shadow}></div>
 
-      <button className={styles.launch}>Launch Client Portal</button>
-    </div>
+      <div className={styles.slick}>
+        <div className={styles.title}>
+          <Image
+            style={{ cursor: 'pointer' }}
+            onClick={logoHandler}
+            src={logoPath}
+            alt="alt"
+            width={150}
+            height={100}
+          />
+          <div style={{ cursor: 'pointer' }} onClick={menuHandler} className={styles.closer}>
+            <Image src={'/icons/announcement/close.svg'} alt="alt" width={24} height={24} />
+            <p style={{ color: 'white', fontSize: '12px', margin: '0px' }}>Close</p>
+          </div>
+        </div>
+        {renderLinks}
+
+        <button className={styles.launch}>Launch Client Portal</button>
+      </div>
+    </>
   );
 
   return isSlickOn && renderSlick;
