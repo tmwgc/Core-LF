@@ -7,15 +7,17 @@ import { FloatMobile, Services } from '../components';
 import Settings from '../../public/stores/settings.json';
 
 interface NavProps {
-  homeLogo: string; // Changed from URL['href'] to string
+  homeLogo: string;
+  isSlickOn: boolean; // Changed from URL['href'] to string
 }
 
-const Nav: React.FC<NavProps> = ({ homeLogo }) => {
+const Nav: React.FC<NavProps> = ({ homeLogo, isSlickOn }) => {
   const { links } = Settings;
   const [serviceList, setServiceList] = useState(false); // Fixed useState usage
 
   const handleServiceListToggle = () => {
     setServiceList((prevState) => !prevState);
+    console.log(serviceList);
   };
 
   return (
@@ -45,7 +47,7 @@ const Nav: React.FC<NavProps> = ({ homeLogo }) => {
           />
         </div>
       </div>
-      {serviceList ? (
+      {serviceList && !isSlickOn ? (
         <div className={`${styles.servicesContainer} ${serviceList ? styles.show : styles.hide}`}>
           {serviceList && <Services serveLinks={links.NavigationLinks} />}
         </div>

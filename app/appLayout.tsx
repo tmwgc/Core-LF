@@ -47,7 +47,7 @@ export default function AppLayout({
               breakAfter={brand.breakAfter}
               homeLogo={Mobilenavigation.homeIconUrl}
             />
-            <Nav homeLogo={Mobilenavigation.homeIconUrl} />
+            <Nav homeLogo={Mobilenavigation.homeIconUrl} isSlickOn={isSlickOn} />
           </div>
 
           {isSlickOn && (

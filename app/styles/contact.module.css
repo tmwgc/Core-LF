@@ -3,7 +3,7 @@
 	grid-auto-flow: column;
 	background-color: var(--primary-dark);
 	align-items: center;
-	padding: 20px;
+	padding: 20px 40px;
 	justify-content: space-between;
 }
 .content_tags {
@@ -30,18 +30,22 @@
 /* media query  */
 
 @media screen and (max-width: 769px) and (min-width: 426px) {
+	
 	.content_tags
 	{
 		font-size: 12px;
 	}
 }
 @media screen and (max-width: 425px) {
+	.content {
+		padding: 20px;
+	}
 	.left{
 		display: flex;
 		gap: 5px;
 	}
 	.content_tags
 	{
-		font-size: 12px;
+		font-size: 10px;
 	}
 }

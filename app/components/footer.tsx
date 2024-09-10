@@ -204,31 +204,36 @@ const Footer: React.FC<FooterProps> = (props) => {
               </div>
             </div>
           </div> */}
-          <div className={styles.container}>
-            <div className={styles.announcement}>
-              {certification.slice(2).map((cert, index) => (
-                <div key={index} className={styles.announcemetDiv}>
-                  <Image
-                    src={cert.icon}
-                    alt="alt"
-                    width={70}
-                    height={70}
-                    className={styles.certificationImg}
-                  />
-                  <div className={styles.certificationLinks}>
-                    <p className={styles.announcementText}>{cert.label}</p>
-                    <Image
-                      style={{ cursor: 'pointer' }}
-                      src="/icons/access/link.svg"
-                      alt="alt"
-                      width={20}
-                      height={20}
-                    />
+          <div className={styles.certificationContainer}>
+            {certification.map((cert, index) => (
+              <>
+                <div className={styles.announcement}>
+                  <div key={index} className={styles.announcemetDiv}>
+                    <div className={styles.certificationImgDiv}>
+                      <Image
+                        src={cert.icon}
+                        alt="alt"
+                        width={70}
+                        height={70}
+                        className={styles.certificationImg}
+                      />
+                    </div>
+                    <div className={styles.certificationLinks}>
+                      <p className={styles.announcementText}>{cert.label}</p>
+                      <Image
+                        style={{ cursor: 'pointer' }}
+                        src="/icons/access/link.svg"
+                        alt="alt"
+                        width={20}
+                        height={20}
+                      />
+                    </div>
                   </div>
                 </div>
-              ))}
-            </div>
-            <div className={styles.announcementCertification}>
+              </>
+            ))}
+
+            {/* <div className={styles.announcementCertification}>
               {certification.slice(0, 2).map((cert, index) => (
                 <div key={index} className={styles.announcemetDiv}>
                   <Image
@@ -250,7 +255,7 @@ const Footer: React.FC<FooterProps> = (props) => {
                   </div>
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

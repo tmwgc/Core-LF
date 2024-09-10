@@ -58,9 +58,9 @@ const Head: React.FC<HeadProps> = (props) => {
       </div>
       <div className={styles.right}>
         <div className={styles.rightBtn}>
-          <button className={styles.btn}>Enroll Now</button>
+          <button className={styles.btn}>Become a Client</button>
         </div>
-        <div className={styles.access}>
+        <div className={styles.accessDiv}>
           <Image
             style={{ cursor: 'pointer' }}
             onClick={callHandler}
@@ -69,7 +69,7 @@ const Head: React.FC<HeadProps> = (props) => {
             width={26}
             height={26}
           />
-          <p>Access</p>
+          <p className={styles.accessText}>Access</p>
         </div>
       </div>
     </div>

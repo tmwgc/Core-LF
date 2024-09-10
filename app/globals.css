@@ -17,6 +17,7 @@
   --secondary-text: #8F94B1;
   --black-screen: #535353;
   --light-green:#00D522;
+  --background-shadow:#818181;
 }
 * {
   margin: 0px;
@@ -49,11 +50,11 @@ a {
   color: inherit;
   cursor: pointer;
   line-height: 1;
-  font-size: 13px;
+  font-size: 16px;
 }
 p {
   color: var(--secondary-text);
-  font-size: 13px;
+  font-size: 16px;
   font-weight: 500;
 }
 
@@ -77,6 +78,7 @@ button {
   font-family: var(--font-inter);
   background-color: var(--primary-dark);
   color: var(--canvas-board);
+  font-size: 12px;
   font-weight: 500;
   cursor: pointer;
 }

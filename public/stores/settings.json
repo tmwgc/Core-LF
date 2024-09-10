@@ -57,22 +57,27 @@
   "links": {
     "NavigationLinks": [
       {
-        "label": "Overview",
+        "label": "Company History",
         "url": "/",
         "icon": "./icons/services/company.svg"
       },
       {
-        "label": "Perks & Benefits",
+        "label": "Service Capabilities",
         "url": "/",
         "icon": "./icons/services/services.svg"
       },
       {
-        "label": "Success Stories",
+        "label": "Customer Success",
         "url": "/",
         "icon": "./icons/services/customer.svg"
       },
       {
-        "label": "Criterias",
+        "label": "Industry & Insights",
+        "url": "/",
+        "icon": "./icons/services/industries.svg"
+      },
+      {
+        "label": "Alliance Ecosystems",
         "url": "/",
         "icon": "./icons/services/industries.svg"
       }
@@ -137,12 +142,19 @@
           "number":"CHED13076A"
         },
         {
-          "label":"Tax Deduction Number",
+          "label":"Tax and Service Deduction Number",
           "number":"CHED13076A"
         }
+        
+        
       ]
     },
     "certification":[
+     {
+      "label":"Official Announcements, & Other Company Gazette Documents",
+      "icon":"/icons/certifications/3.svg",
+      "split":"Accessible"
+     },
      {
       "label":"Government of India Tax Registration & Annual Compliance Filings",
       "icon":"/icons/certifications/1.svg",
@@ -152,11 +164,6 @@
       "label":"Certificate of Incorporation, Shareholders Pattern, Articles of Association & Memorandums",
       "icon":"/icons/certifications/2.svg",
       "split":"Flexible"
-     },
-     {
-      "label":"Press Releases, Official Announcements, & Other Company Gazette Documents",
-      "icon":"/icons/certifications/3.svg",
-      "split":"Accessible"
      }
     ]
   },
@@ -178,7 +185,7 @@
       "label":"FaceBook"
     },
     {
-      "icon":"/icons/socialMedia/faceBook.svg",
+      "icon":"/icons/socialMedia/instagram.svg",
       "label":"FaceBook"
     }
   ],
