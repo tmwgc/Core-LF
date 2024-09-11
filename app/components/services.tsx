@@ -28,6 +28,7 @@ const services: React.FC<ServiceProps> = (props) => {
               textDecoration: 'none',
               fontSize: '12px',
             }}
+            className={styles.links}
             key={i}
             href={link.url}>
             {link.label}

@@ -8,7 +8,7 @@ const inter = Plus_Jakarta_Sans({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'TMW | Growth Consulting',
   description:
-    'We’re data-driven strategists delivering growth optimization approaches to unlock the full swing potential of revenue streams in your business.',
+    'We’re data-driven strategists delivering growth optimization approaches to unlock the channelize the fullswing potential of revenue streams in your business. Madras Wallstreet Growth Consulting, envisions to enable regional brands to achieve global reach through proven digital strategies.',
 };
 
 export default function RootLayout({

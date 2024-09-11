@@ -41,7 +41,7 @@
   align-items: center;
 }
 .btn {
-  padding: 15px 25px;
+  padding: 10px 32px;
   margin: auto;
 }
 .accessText {
@@ -83,6 +83,11 @@
   }
  
 }
+@media screen and (max-width:425px) {
+  .head{
+    padding: 0 20px;
+  }
+}
 @media screen and (max-width:700px) {
   .btn{
     display: none;
@@ -96,10 +101,7 @@
   .mobile {
     display: block;
   }
-  .head {
-    gap: 0;
-    padding: 20px;
-  }
+ 
   .left {
     gap: 20px;
   }

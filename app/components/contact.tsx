@@ -18,9 +18,9 @@ const Contact = () => {
         <div className={styles.right}>
           <Image
             style={{ cursor: 'pointer' }}
-            onClick={callHandler}
             src={'/icons/access/user.svg'}
             alt="alt"
+            className={styles.contactIcons}
             width={26}
             height={26}
           />
@@ -29,9 +29,9 @@ const Contact = () => {
         <div className={styles.right}>
           <Image
             style={{ cursor: 'pointer' }}
-            onClick={callHandler}
             src={'/icons/access/feather.svg'}
             alt="alt"
+            className={styles.contactIcons}
             width={26}
             height={26}
           />
@@ -39,18 +39,29 @@ const Contact = () => {
         </div>
       </div>
 
-      <div className={styles.right}>
-        <Image
-          style={{ cursor: 'pointer' }}
-          onClick={callHandler}
-          src={'/icons/phone.svg'}
-          alt="alt"
-          width={26}
-          height={26}
-        />
-        <div className={styles.contact_number}>
-          <p className={styles.content_tags_right}>Client Helpdesk</p>
-          <p className={styles.content_tags_right}>9677754778</p>
+      <div className={styles.rightDiv}>
+        <div className={styles.right}>
+          <Image
+            style={{ cursor: 'pointer' }}
+            src={'/icons/access/settings.svg'}
+            alt="alt"
+            className={styles.contactIcons}
+            width={26}
+            height={26}
+          />
+          <p className={styles.content_tags_right}>Preferences</p>
+        </div>
+        <div className={styles.right}>
+          <Image
+            style={{ cursor: 'pointer' }}
+            onClick={callHandler}
+            src={'/icons/access/phone.svg'}
+            alt="alt"
+            className={styles.contactIcons}
+            width={26}
+            height={26}
+          />
+          <p className={styles.content_tags_right}>Assistance</p>
         </div>
       </div>
     </div>

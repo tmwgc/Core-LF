@@ -35,7 +35,7 @@ const FloatMobile: React.FC<FloatPropsMobile> = (props) => {
           </Link>
         ))}
       </div>
-      <div className={styles.SmMobileViewList}>
+      {/* <div className={styles.SmMobileViewList}>
         {linksToShow.map((link, i) => (
           <Link
             key={i}
@@ -46,7 +46,7 @@ const FloatMobile: React.FC<FloatPropsMobile> = (props) => {
             {link.label}
           </Link>
         ))}
-      </div>
+      </div> */}
     </>
   );
 };

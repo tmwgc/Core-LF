@@ -18,13 +18,19 @@ interface Certification {
   label: string;
   icon: string;
   split: string;
+  link: string;
+}
+interface footerLabels {
+  label: string;
+  link: string;
+  links?: [];
 }
 
 interface FooterProps {
   brandLogo: string;
   copyright_max: string;
   copyright_min: string;
-  labels: string[];
+  labels: footerLabels[];
   address: string;
   pincode: string;
   InstituteName: string;
@@ -50,8 +56,6 @@ const Footer: React.FC<FooterProps> = (props) => {
   } = props;
   const { socialMediaIcons, contactIcons, footer } = Settings;
 
-  const linksToShow = labels.length > 3 ? labels?.slice(0, 3) : labels;
-
   return (
     <div className={styles.footer}>
       <div className={styles.footerContent}>
@@ -75,20 +79,27 @@ const Footer: React.FC<FooterProps> = (props) => {
           <div className={styles.logoContent}>
             <div className={styles.socialMedia}>
               {socialMediaIcons.map((socialMedia, index) => (
-                <Image
-                  key={index}
-                  className={styles.socialMediaIcons}
-                  style={{ cursor: 'pointer' }}
-                  src={socialMedia.icon}
-                  alt={socialMedia.label}
-                  width={30}
-                  height={30}
-                />
+                <Link href={socialMedia.link} key={index} passHref>
+                  <div>
+                    <Image
+                      className={styles.socialMediaIcons}
+                      style={{ cursor: 'pointer' }}
+                      src={socialMedia.icon}
+                      alt={socialMedia.label}
+                      width={30}
+                      height={30}
+                    />
+                  </div>
+                </Link>
               ))}
             </div>
             <div className={styles.contact}>
               {contactIcons.map((contact, index) => (
-                <div key={index} style={{ display: 'flex', gap: '5px', marginBottom: '10px' }}>
+                <Link
+                  href={contact.link}
+                  key={index}
+                  style={{ display: 'flex' }}
+                  className={styles.contactDiv}>
                   <Image
                     style={{ cursor: 'pointer' }}
                     src={contact.icon}
@@ -97,7 +108,7 @@ const Footer: React.FC<FooterProps> = (props) => {
                     height={20}
                   />
                   <p className={styles.contactText}>{contact.label}</p>
-                </div>
+                </Link>
               ))}
             </div>
           </div>
@@ -125,18 +136,30 @@ const Footer: React.FC<FooterProps> = (props) => {
           </div>
           <div className={styles.announcementMain}>
             <div className={styles.announcementHead}>
-              <p className={styles.announcementHeadPhara}>Honor Codes</p>
+              {labels.slice(0, 3).map((item, i) => (
+                <Link key={i} href={item.link} className={styles.announcementHeadPhara}>
+                  {item.label}
+                </Link>
+              ))}
+              {/* <p className={styles.announcementHeadPhara}>Sitemap</p>
               <p className={styles.announcementHeadPhara}>Legal Documents</p>
-              <p className={styles.announcementHeadPhara}>Corporate Governance</p>
+              <p className={styles.announcementHeadPhara}>Corporate Governance</p> */}
             </div>
           </div>
           <div className={styles.certificationContainerFirst}>
             <div className={styles.firstGroupCertificationDiv}>
               {footer.certification.slice(0, 1).map((certification, index) => (
-                <div key={index} className={styles.firstGroupCertification}>
+                // <Link className={styles.licenseName} href="">
+                // {item.label}
+                // </Link>
+                <Link
+                  key={index}
+                  className={styles.firstGroupCertification}
+                  href={certification.link}>
                   <Image
                     style={{ cursor: 'pointer' }}
                     src={certification.icon}
+                    className={styles.certificationIcons}
                     alt="Certification Icon"
                     width={70}
                     height={70}
@@ -153,7 +176,7 @@ const Footer: React.FC<FooterProps> = (props) => {
                       <p className={styles.fontWightSmColor}>{certification.label}</p>
                     </div>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
             <div className={styles.secondGroupCertificationDiv}>
@@ -161,6 +184,7 @@ const Footer: React.FC<FooterProps> = (props) => {
                 <div key={index} className={styles.certification}>
                   <Image
                     style={{ cursor: 'pointer' }}
+                    className={styles.certificationIcons}
                     src={certification.icon}
                     alt="Certification Icon"
                     width={70}
@@ -188,8 +212,8 @@ const Footer: React.FC<FooterProps> = (props) => {
         <div className={styles.desktop}>
           <div className={styles.items}>
             {labels.map((item, i) => (
-              <Link key={i} href="#" className={styles.itemLink}>
-                {item}
+              <Link key={i} href={item.link} className={styles.itemLink}>
+                {item.label}
               </Link>
             ))}
           </div>
@@ -199,9 +223,9 @@ const Footer: React.FC<FooterProps> = (props) => {
         </div>
         <div className={styles.mobile}>
           <div className={styles.items}>
-            {linksToShow.map((item, i) => (
-              <Link key={i} href="#" className={styles.itemLink}>
-                {item}
+            {labels.slice(3, 6).map((item, i) => (
+              <Link key={i} href={item.link} className={styles.itemLink}>
+                {item.label}
               </Link>
             ))}
           </div>
