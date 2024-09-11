@@ -39,15 +39,16 @@ const Slick: React.FC<SlickProps> = (props) => {
           alt="alt"
           width={24}
           height={24}
+          className={styles.linksIcon}
         />
         <Link
           style={{
             color: `${link.url === pathname ? 'var(--active)' : 'var(--inactive)'}`,
-            fontSize: '10px',
             listStyle: 'none',
             textDecoration: 'none',
           }}
-          href={link.url}>
+          className={styles.linksText}
+          href="">
           {link.label}
         </Link>
       </div>
@@ -64,13 +65,16 @@ const Slick: React.FC<SlickProps> = (props) => {
             style={{ cursor: 'pointer' }}
             onClick={logoHandler}
             src={logoPath}
+            className={styles.BrandLogo}
             alt="alt"
             width={150}
             height={100}
           />
           <div style={{ cursor: 'pointer' }} onClick={menuHandler} className={styles.closer}>
             <Image src={'/icons/announcement/close.svg'} alt="alt" width={24} height={24} />
-            <p style={{ color: 'white', fontSize: '12px', margin: '0px' }}>Close</p>
+            <p style={{ color: 'white', margin: '0px' }} className={styles.cancelBtn}>
+              Close
+            </p>
           </div>
         </div>
         {renderLinks}

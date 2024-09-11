@@ -48,8 +48,7 @@
 		display: flex;
 		gap: 5px;
 	}
-	.content_tags
-	{
-		font-size: 10px;
+	.content_tags_left,.content_tags_right {
+		font-size: 12px;
 	}
 }

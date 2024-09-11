@@ -25,9 +25,17 @@
     grid-auto-flow: column;
     justify-content: space-between;
     align-items: center;
-
 }
-
+.linksIcon{
+    width: 25px;
+    height: 25px;
+}
+.linksText{
+    font-size: 14px;
+}
+.cancelBtn{
+    font-size: 14px;
+}
 .closer {
     display: grid;
     place-items: center;
@@ -37,7 +45,7 @@
     border-radius: 1.614px;
     background-color: #3A457F;
     padding: 15px 32px;
-    font-size: 10px;
+    font-size: 14px;
     width: 100%;
     margin: 32px 0px;
 }
@@ -50,4 +58,27 @@
     margin: 24px 0px;
     cursor: pointer;
     align-items: center;
+}
+
+@media screen and (max-width:700px) and (min-width:400px) {
+    .linksText,.cancelBtn,.launch{
+        font-size: 12px;
+    }
+    .BrandLogo{
+        width: 120px;
+        height: 70px;
+    }
+}
+@media screen and (max-width:399px) {
+    .linksText,.cancelBtn{
+        font-size: 11px;
+    }
+    .launch{
+        font-size: 11px;
+        padding: 15px 27px;
+    }
+    .BrandLogo{
+        width: 100px;
+        height: 60px;
+    }
 }

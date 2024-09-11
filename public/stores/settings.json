@@ -1,7 +1,7 @@
 {
   "brand": {
     "label": "The Madras Wallstreet",
-    "logoPath": "./brand/labels/color.svg",
+    "logoPath": "./brand/labels/logo (3).svg",
     "logoPathColor": "./brand/labels/color.svg",
     "quotes": "Learn effective ways to monetize skills and self-employ yourself",
      "breakAfter": "monetize "
@@ -188,11 +188,11 @@
   "contactIcons":[
     {
       "icon":"/icons/socialMedia/phone.svg",
-      "label":"9677754778"
+      "label":"+044 2564 2614"
     }, 
     {
       "icon":"/icons/socialMedia/send.svg",
-      "label":"edu@sarvaloka.in"
+      "label":"consult@sbc.co.uk"
     }
   ]
 }

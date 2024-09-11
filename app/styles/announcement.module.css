@@ -96,6 +96,19 @@
 }
 
 /* media query */
+@media screen and (max-width:1300px) {
+	.content {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+	}
+	.cancelIcon {
+		display: flex;
+	}
+	.cancelIconInside {
+		display: none;
+	}
+}
 
 @media screen and (max-width: 769px) and (min-width:426px) {
 	.content {
