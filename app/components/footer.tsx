@@ -68,8 +68,8 @@ const Footer: React.FC<FooterProps> = (props) => {
               />
             </div>
             <div>
-              <p className={styles.fontWightSm}>{address}</p>
-              <p className={styles.fontWightSm}>{pincode}</p>
+              <p className={styles.addressText}>{address}</p>
+              <p className={styles.addressBoldText}>{pincode}</p>
             </div>
           </div>
           <div className={styles.logoContent}>
@@ -96,7 +96,7 @@ const Footer: React.FC<FooterProps> = (props) => {
                     width={20}
                     height={20}
                   />
-                  <p className={styles.fontWightSm}>{contact.label}</p>
+                  <p className={styles.contactText}>{contact.label}</p>
                 </div>
               ))}
             </div>
@@ -105,157 +105,82 @@ const Footer: React.FC<FooterProps> = (props) => {
         <div className={styles.right}>
           <div className={styles.leftRight}>
             <div className={styles.leftContent}>
-              <h4 className={styles.fontWight}>{InstituteDiscription}</h4>
+              <h4 className={styles.instituteDis}>{InstituteDiscription}</h4>
               <h2 className={styles.brandName}>{InstituteName}</h2>
               <p className={styles.details}>{InstituteDetails}</p>
             </div>
             <div className={styles.rightRight}>
-              <h4 className={`${styles.fontWight} ${styles.licenseLabel}`}>
-                {license_informations.label}
-              </h4>
+              <h4 className={styles.licenseLabel}>{license_informations.label}</h4>
               <div className={styles.numberDiv}>
                 {license_informations.license.map((item, index) => (
                   <div className={styles.numbereflexbox} key={index}>
                     <div>
-                      <p className={styles.fontWeight}>{item.label}</p>
-                      <h5 className={styles.number}>{item.number}</h5>
+                      <p className={styles.licenseName}>{item.label}</p>
+                      <h5 className={styles.licenseNumber}>{item.number}</h5>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
           </div>
-          <div className={styles.rightBottom}>
-            {footer.certification.map((certification, index) => (
-              <div key={index} className={styles.certification}>
-                <Image
-                  style={{ cursor: 'pointer' }}
-                  src={certification.icon}
-                  alt="Certification Icon"
-                  width={70}
-                  height={70}
-                />
-                <div className={styles.certificationLinks}>
-                  <p className={styles.fontWightSmColor}>{certification.label}</p>
+          <div className={styles.announcementMain}>
+            <div className={styles.announcementHead}>
+              <p className={styles.announcementHeadPhara}>Honor Codes</p>
+              <p className={styles.announcementHeadPhara}>Legal Documents</p>
+              <p className={styles.announcementHeadPhara}>Corporate Governance</p>
+            </div>
+          </div>
+          <div className={styles.certificationContainerFirst}>
+            <div className={styles.firstGroupCertificationDiv}>
+              {footer.certification.slice(0, 1).map((certification, index) => (
+                <div key={index} className={styles.firstGroupCertification}>
                   <Image
                     style={{ cursor: 'pointer' }}
-                    src="/icons/access/link.svg"
-                    alt="Link Icon"
-                    width={20}
-                    height={20}
-                  />
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className={styles.announcementMain}>
-          <div className={styles.announcementHead}>
-            <p className={styles.announcementHeadPhara}>Honor Codes</p>
-            <p className={styles.announcementHeadPhara}>Legal Documents</p>
-            <p className={styles.announcementHeadPhara}>Corporate Governance</p>
-          </div>
-          {/* <div className={styles.announcement}>
-            <div className={styles.announcemetDiv}>
-              <Image src={'/icons/certifications/3.svg'} alt="alt" width={70} height={70} />
-              <div className={styles.certificationLinks}>
-                <p className={styles.announcementText}>
-                  Official Announcements,Press Releases & Other Misc. Company Gazette Documents
-                </p>
-                <Image
-                  style={{ cursor: 'pointer' }}
-                  src={'/icons/access/link.svg'}
-                  alt="alt"
-                  width={20}
-                  height={20}
-                />
-              </div>
-            </div>
-          </div>
-          <div className={styles.announcementCertification}>
-            <div className={styles.certification}>
-              <Image src={'/icons/certifications/1.svg'} alt="alt" width={70} height={70} />
-              <div className={styles.certificationLinks}>
-                <p className={styles.fontWightSmColor}>
-                  Government of India Tax Registration & Annual Compliance & Filingd
-                </p>
-                <Image
-                  style={{ cursor: 'pointer' }}
-                  src={'/icons/access/link.svg'}
-                  alt="alt"
-                  width={20}
-                  height={20}
-                />
-              </div>
-            </div>
-            <div className={styles.certification}>
-              <Image src={'/icons/certifications/2.svg'} alt="alt" width={70} height={70} />
-              <div className={styles.certificationLinks}>
-                <p className={styles.fontWightSmColor}>
-                  Government of India Tax Registration & Annual Compliance & Filingd
-                </p>
-                <Image
-                  style={{ cursor: 'pointer' }}
-                  src={'/icons/access/link.svg'}
-                  alt="alt"
-                  width={20}
-                  height={20}
-                />
-              </div>
-            </div>
-          </div> */}
-          <div className={styles.certificationContainer}>
-            {certification.map((cert, index) => (
-              <>
-                <div className={styles.announcement}>
-                  <div key={index} className={styles.announcemetDiv}>
-                    <div className={styles.certificationImgDiv}>
-                      <Image
-                        src={cert.icon}
-                        alt="alt"
-                        width={70}
-                        height={70}
-                        className={styles.certificationImg}
-                      />
-                    </div>
-                    <div className={styles.certificationLinks}>
-                      <p className={styles.announcementText}>{cert.label}</p>
-                      <Image
-                        style={{ cursor: 'pointer' }}
-                        src="/icons/access/link.svg"
-                        alt="alt"
-                        width={20}
-                        height={20}
-                      />
-                    </div>
-                  </div>
-                </div>
-              </>
-            ))}
-
-            {/* <div className={styles.announcementCertification}>
-              {certification.slice(0, 2).map((cert, index) => (
-                <div key={index} className={styles.announcemetDiv}>
-                  <Image
-                    className={styles.certificationImg}
-                    src={cert.icon}
-                    alt="alt"
+                    src={certification.icon}
+                    alt="Certification Icon"
                     width={70}
                     height={70}
                   />
                   <div className={styles.certificationLinks}>
-                    <p className={styles.announcementText}>{cert.label}</p>
                     <Image
                       style={{ cursor: 'pointer' }}
                       src="/icons/access/link.svg"
-                      alt="alt"
+                      alt="Link Icon"
                       width={20}
                       height={20}
                     />
+                    <div>
+                      <p className={styles.fontWightSmColor}>{certification.label}</p>
+                    </div>
                   </div>
                 </div>
               ))}
-            </div> */}
+            </div>
+            <div className={styles.secondGroupCertificationDiv}>
+              {footer.certification.slice(1).map((certification, index) => (
+                <div key={index} className={styles.certification}>
+                  <Image
+                    style={{ cursor: 'pointer' }}
+                    src={certification.icon}
+                    alt="Certification Icon"
+                    width={70}
+                    height={70}
+                  />
+                  <div className={styles.certificationLinks}>
+                    <Image
+                      style={{ cursor: 'pointer' }}
+                      src="/icons/access/link.svg"
+                      alt="Link Icon"
+                      width={20}
+                      height={20}
+                    />
+                    <div>
+                      <p className={styles.fontWightSmColor}>{certification.label}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </div>
       </div>
@@ -269,7 +194,7 @@ const Footer: React.FC<FooterProps> = (props) => {
             ))}
           </div>
           <div className={styles.content}>
-            <p className={styles.contenttext}>{copyright_max}</p>
+            <p className={styles.contentText}>{copyright_max}</p>
           </div>
         </div>
         <div className={styles.mobile}>
@@ -281,7 +206,7 @@ const Footer: React.FC<FooterProps> = (props) => {
             ))}
           </div>
           <div className={styles.content}>
-            <p className={styles.contenttext}>{copyright_min}</p>
+            <p className={styles.contentText}>{copyright_min}</p>
           </div>
         </div>
       </div>

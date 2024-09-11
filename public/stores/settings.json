@@ -121,8 +121,8 @@
       "Legal Documents",
       "Corporate Governance"
     ],
-    "address":"2nd Floor, Jalani Towers, Gandhi Rd, Pammal",
-    "pincode":"Chennai, Tamil Nadu - 600075",
+    "address":"#1, VOC Street, Mahalaxmi Nagar",
+    "pincode":"East Tambaram, Chennai - 600059",
     "InstituteName":"Dehustle Institute Private Limited",
     "Institute_discription":"Registered and Incorporated Under Ministry of Corporate Affairs as",
     "Institute_details":"In the competitive world of aviation, helicopter service providers must differentiate themselves from the competition to attract high-end clientele. Luxury, exotic, and signature experiences are what discerning  customers are seeking, and branding plays a critical role in conveying these values. Crafting a strong brand strategy, coupled with an effective content and digital strategy, can elevate a helicopter service provider from being just a mode of transportation to a sought-after experience. This article delves into the critical importance of branding for helicopter service providers in the aviation industry and the key strategies they can employ to stand out in a crowded marketplace.",
@@ -161,7 +161,7 @@
       "split":"Back"
      },
      {
-      "label":"Certificate of Incorporation, Shareholders Pattern, Articles of Association & Memorandums",
+      "label":"Certificate of Incorporation, Articles of Association & Memorandums",
       "icon":"/icons/certifications/2.svg",
       "split":"Flexible"
      }
@@ -181,12 +181,8 @@
       "label":"Youtube"
     },
     {
-      "icon":"/icons/socialMedia/faceBook.svg",
-      "label":"FaceBook"
-    },
-    {
       "icon":"/icons/socialMedia/instagram.svg",
-      "label":"FaceBook"
+      "label":"Instagram"
     }
   ],
   "contactIcons":[

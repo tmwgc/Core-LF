@@ -1,5 +1,5 @@
 .brandLogoImg {
-  width: 180px;
+  width: auto;
   height: 90px;
 }
 .footer {
@@ -11,12 +11,12 @@
   background-color: var(--border-color-white);
 }
 .itemLink {
-  color: white;
+  color: var(--sky-mist);
   font-size: 14px;
 }
-.contenttext {
+.contentText {
   text-align: center;
-  color: white;
+  color: var(--soft-serenity);
   font-weight: 400;
   font-size: 14px;
 }
@@ -31,12 +31,21 @@
 
 .content {
   padding: 20px;
-  background-color: var(--bottom-bar-2);
+  background-color: var(--primary-dark);
 }
 .fontWightSm {
   font-size: 15px;
   font-weight: 600;
   color: var(--dark);
+}
+.addressText,.contactText{
+  font-size: 14px;
+  color: var(--primary-dark);
+}
+.addressBoldText{
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--primary-dark);
 }
 .fontWightSmColor {
   color: var(--primary-blue);
@@ -57,14 +66,14 @@
   display: flex;
   padding: 20px 40px;
   gap: 20px;
-  border-top: 1px solid var(--border-color-white);
+  border-top: 2px solid var(--border-color-white);
 }
 .left {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border-right: 1px solid var(--border-color-white);
+  border-right: 2px solid var(--border-color-white);
   gap: 15px;
   padding-right: 10px;
 }
@@ -76,9 +85,13 @@
 }
 .socialMedia {
   display: flex;
-  gap: 10px;
+  gap: 15px;
   justify-content: center;
   padding: 10px 0px;
+}
+.socialMediaIcons{
+  width: 35px;
+  height: 35px;
 }
 .contact {
   display: flex;
@@ -87,10 +100,14 @@
 }
 .leftRight {
   display: flex;
+  padding-bottom: 10px;
 }
 
 .details {
   font-size: 14px;
+  color: var(--stone-gray);
+  text-align: justify;
+  font-weight: normal;
 }
 .leftContent {
   flex: 1;
@@ -98,14 +115,11 @@
   flex-direction: column;
   gap: 10px;
   padding-right: 10px;
-  border-right: 1px solid var(--border-color-white);
+  border-right: 2px solid var(--border-color-white);
 }
-.number {
+.licenseName,.licenseNumber{
   font-size: 13px;
   color: var(--light-dark);
-}
-.fontWeight {
-  font-size: 13px;
 }
 .rightRight {
   display: flex;
@@ -119,6 +133,7 @@
   padding-top: 10px;
   gap: 10px;
   justify-content: space-between;
+  border-top: 2px solid var(--border-color-white);
 }
 .certification {
   display: flex;
@@ -133,6 +148,17 @@
   color: var(--primary-dark);
   font-weight: 600;
   font-size: 15px;
+}
+.instituteDis,.licenseLabel{
+  color: var(--primary-dark);
+  font-weight: 600;
+  font-size: 16px;
+  font-style: italic;
+}
+.logoContent{
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
 }
 .breakLine {
   display: block;
@@ -157,6 +183,7 @@
   flex-direction: column;
   text-align: center;
   padding: 0 10px;
+  gap: 15px;
 }
 .certificationLinks {
   flex: 1;
@@ -166,11 +193,34 @@
 }
 .brandName {
   font-size: 19px;
-  color: var(--dark);
+  color: var(--primary-dark);
+  font-weight: 800;
 }
+
+.firstGroupCertification{
+  display: flex;
+  gap: 10px;
+}
+
 .certificationContainer{
   display: flex;
-  flex-direction: column;
+  gap: 20px;
+  justify-content: space-around;
+  padding: 10px 0px;
+}
+.certificationContainerFirst{
+  display: flex;
+  gap: 20px;
+  justify-content: space-around;
+  padding: 20px 0px;
+  border-top: 2px solid var(--border-color-white);
+}
+.firstGroupCertificationDiv{
+  flex:0.5;
+}
+.secondGroupCertificationDiv{
+  display: flex;
+  flex: 1;
   gap: 20px;
 }
 .certificationImgDiv{
@@ -180,19 +230,59 @@
   align-items: end;
   justify-content: end;
 }
+.licenseLabel{
+  margin: auto 0;
+  flex: 1;
+}
+.firstGroupCertification > div{
+  flex-direction: row-reverse;
+    justify-content: space-between;
+    padding-right: 40px;
+}
 /* media query */
 
-@media (max-width: 789px) and (min-width:426px) {
+@media screen and (min-width:1025px) and (max-width:1300px){
+  .certificationContainer{
+    flex-direction: column;
+  }
+  .certificationContainerFirst{
+    flex-direction: column;
+  }
+  .firstGroupCertificationDiv{
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 2px solid #cfd7ff;
+
+  }
+  .secondGroupCertificationDiv{
+    display: flex;
+  }
+}
+
+@media (max-width: 1024px) and (min-width:425px) {
+  .certificationContainer{
+    flex-direction: column;
+  }
+  .certificationContainerFirst{
+    flex-direction: column;
+    border: none;
+    padding: 20px 0px;
+  }
+  .firstGroupCertificationDiv{
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 2px solid #cfd7ff;
+
+  }
+  .secondGroupCertificationDiv{
+    display: flex;
+  }
   .footer {
     position: relative;
   }
   .brandLogoImg {
-    width: 160px;
-    height: 85px;
-  }
-  .licenseLabel{
-    margin: auto;
-    flex: 1;
+    width:auto;
+    height: 82px;
   }
   .items {
     padding: 15px;
@@ -234,14 +324,16 @@
   .logoContent {
     display: flex;
     flex: 1;
+    gap: 0;
     flex-direction: column-reverse;
     justify-content: center;
     align-items: center;
     padding-left: 10px;
-    border-left: 1px solid var(--border-color-white);
+    border-left: 2px solid var(--border-color-white);
   }
   .footerContent {
     display: block;
+    padding: 0 40px;
   }
   .certificationImg{
     position: absolute;
@@ -252,24 +344,23 @@
   .right {
     display: flex;
     padding: 10px 0px;
-    border-top: 1px solid var(--border-color-white);
+    flex-direction: column;
+    border-top: 2px solid var(--border-color-white);
   }
   .leftContent {
     display: flex;
     padding: 10px 0px;
     border: none;
-    border-top: 1px solid var(--border-color-white);
-    border-bottom: 1px solid var(--border-color-white);
-  }
-  .fontWightSmColor {
-    font-size: 10px;
+    border-top: 2px solid var(--border-color-white);
   }
   .announcementHead {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-bottom: 20px;
-    padding-top: 10px;
+    padding: 20px 0;
+    border-top: 2px solid var(--border-color-white);
+    border-bottom: 2px solid var(--border-color-white);
+
   }
 
   .announcementCertification {
@@ -309,6 +400,7 @@
     padding: 10px 0px;
     flex-direction: column;
     align-items: center;
+    gap: 0;
   }
   .rightRight {
     flex-direction: row;
@@ -320,7 +412,7 @@
     align-items: center;
     flex: 0.1;
     padding-right: 15px;
-    border-right: 1px solid var(--border-color-white);
+    border-right: 2px solid var(--border-color-white);
   }
   .numberDiv {
     display: grid;
@@ -344,7 +436,13 @@
   .details {
   }
 }
-@media screen and (max-width:425px) {
+/* @media screen and (max-width:699px) {
+  .certificationContainer{
+    flex-direction: column;
+  }
+  .certificationContainerFirst{
+    display: none;
+  }
   .footerContent{
     display: block;
     padding: 10px 20px;
@@ -385,13 +483,13 @@
       display: flex;
       padding: 10px 0px;
       border: none;
-      border-top: 1px solid var(--border-color-white);
-      border-bottom: 1px solid var(--border-color-white);
+      border-top: 2px solid var(--border-color-white);
+      border-bottom: 2px solid var(--border-color-white);
   }  
   .right {
     display: flex;
     padding: 10px 0px;
-    border-top: 1px solid var(--border-color-white);
+    border-top: 2px solid var(--border-color-white);
   }
   .leftRight {
     display: flex;
@@ -400,11 +498,12 @@
   .logoContent{
       display: flex;
       flex: 1 1;
+      gap: 0;
       flex-direction: column-reverse;
       justify-content: center;
       align-items: center;
       padding-left: 10px;
-      border-left: 1px solid var(--border-color-white);
+      border-left: 2px solid var(--border-color-white);
   }
   .fontWightSm{
     font-size: 12px;
@@ -418,12 +517,8 @@
   .rightBottom {
     display: none;
   }
-  .licenseLabel{
-    margin: auto;
-    flex: 1;
-  }
   .announcementMain{
-      display: block;
+      display: none;
   }
   .announcement {
     margin: 10px 0;
@@ -465,13 +560,9 @@
     display: block;
   }
   .itemLink {
-    color: white;
     font-size: 12px;
   }
-  .contenttext {
-    text-align: center;
-    color: white;
-    font-weight: 400;
+  .contentText {
     font-size: 12px;
   }
   .certificationImgDiv{
@@ -483,14 +574,9 @@
     width: 80px;
     height: 80px;
   }
-}
+} */
 @media screen and (max-width:375px) {
   .numberDiv {
     grid-template-columns: auto ;
-  }
-}
-@media screen and (max-width:1439px) and (min-width:790px) {
-  .footerContent{
-    padding: 20px;
   }
 }

@@ -12,11 +12,11 @@
   justify-content: center;
 }
 .links {
-  padding: 30px 5px;
+  padding: 35px 5px;
   position: relative;
   display: flex;
   gap: 10px;
-  color: var(--secondary-text);
+  color: var(--faded-blue);
 }
 .linkWrapper {
   display: flex;
@@ -36,7 +36,8 @@
   bottom: 0;
   width: 0;
   height: 5px;
-  background-color: var(--border-color);
+  border-radius: 50px;
+  background-color: var(--lavender-haze);
   transition: width 0.3s ease;
 }
 

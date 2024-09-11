@@ -24,7 +24,7 @@ const Contact = () => {
             width={26}
             height={26}
           />
-          <p className={styles.content_tags}>Investor Relations</p>
+          <p className={styles.content_tags_left}>Investor Relations</p>
         </div>
         <div className={styles.right}>
           <Image
@@ -35,7 +35,7 @@ const Contact = () => {
             width={26}
             height={26}
           />
-          <p className={styles.content_tags}>Press Releases</p>
+          <p className={styles.content_tags_left}>Press Releases</p>
         </div>
       </div>
 
@@ -49,8 +49,8 @@ const Contact = () => {
           height={26}
         />
         <div className={styles.contact_number}>
-          <p className={styles.content_tags}>Client Helpdesk</p>
-          <p className={styles.content_tags}>9677754778</p>
+          <p className={styles.content_tags_right}>Client Helpdesk</p>
+          <p className={styles.content_tags_right}>9677754778</p>
         </div>
       </div>
     </div>

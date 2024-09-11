@@ -44,7 +44,7 @@ const Head: React.FC<HeadProps> = (props) => {
         <Image
           onClick={logoHandler}
           style={{ cursor: 'pointer' }}
-          className="mainLogo"
+          className={styles.mainLogo}
           src={logoPath}
           alt="alt"
           width={142}

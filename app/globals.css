@@ -10,14 +10,17 @@
   --canvas-pure: white;
   --active: #002aff;
   --inactive: #5464b9;
-  --border-color: #DCDDE7;
+  --border-color: #EEEEEE;
   --bottom-bar-1:#001168;
-  --bottom-bar-2:#000E56;
-  --border-color-white: #e0e0e0;
-  --secondary-text: #8F94B1;
+  --border-color-white: #EEEEEE;
+  --secondary-text: #8F8F8F;
   --black-screen: #535353;
   --light-green:#00D522;
-  --background-shadow:#818181;
+  --stone-gray:#818181;
+  --sky-mist:#BCC7FF;
+  --faded-blue:#8F94B1;
+  --lavender-haze:#DCDDE7;
+  --soft-serenity:#CFD7FF;
 }
 * {
   margin: 0px;

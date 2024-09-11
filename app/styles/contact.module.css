@@ -3,11 +3,15 @@
 	grid-auto-flow: column;
 	background-color: var(--primary-dark);
 	align-items: center;
-	padding: 20px 40px;
+	padding: 10px 40px;
 	justify-content: space-between;
 }
-.content_tags {
-	color: white;
+.content_tags_left {
+	color: var(--sky-mist);
+	font-size: 14px;
+}
+.content_tags_right{
+	color: var(--faded-blue);
 	font-size: 14px;
 }
 .left{
