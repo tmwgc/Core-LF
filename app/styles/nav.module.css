@@ -35,6 +35,7 @@
 }
 .servicesContainer{
   display: none;
+  box-shadow: 0px 0px 20px 0px #CFCFCF;
 }
 .blackScreenVisible{
   display: none;
@@ -45,9 +46,27 @@
 @media screen and (max-width: 769px) and (min-width:427px){
   .main {
     display: flex;
+    padding-right: 0;
+  }
+  .hamburgerIcon{
+    display: flex;
+  }
+  .blackScreenVisible{
+    display: block;
+    height: 100vh;
+    width: 100%;
+    position: absolute;
+    background: #3b343469;
+    z-index: 1;
+  }
+  .servicesContainer {
+    display: block;
+    position: absolute;
+    width: 100%;
+    z-index: 2;
   }
 }
-@media (max-width: 426px) {
+@media (max-width: 699px) {
   .main{
     display: flex;
     padding: 0px 0px 0px 20px;
@@ -76,7 +95,7 @@
   
 }
 @media screen and (min-width: 770px) {
-  .servicesContainer {
+  /* .servicesContainer {
     display: none;
-  }
+  } */
 }

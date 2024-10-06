@@ -1,7 +1,7 @@
 {
   "brand": {
     "label": "The Madras Wallstreet",
-    "logoPath": "./brand/labels/color.svg",
+    "logoPath": "./brand/labels/logo (3).svg",
     "logoPathColor": "./brand/labels/color.svg",
     "quotes": "Learn effective ways to monetize skills and self-employ yourself",
      "breakAfter": "monetize "
@@ -115,17 +115,19 @@
     "copyright_max": "Copyright © All Rights Reserved | The Madras Wallstreet Growth Consulting ® TMWGC | Incorporated as Dewallstreet Private Limited",
     "copyright_min": "Copyright © All Rights Reserved | ® TMWGC",
     "labels": [
-      "Privacy Policies",
-      "Terms of Services",
-      "Honor Codes",
-      "Legal Documents",
-      "Corporate Governance"
+
+      {"label":"Sitemap","link":"https://tmwgc.com/sitemap"},
+      {"label":"Honor Codes","link":"https://tmwgc.com/codes"},
+      {"label":"Corporate Governance","link":"https://gov.tmwgc.com"},
+      {"label":"Privacy Policies","link":"https://tmwgc.com/policies"},
+      {"label":"Terms of Services","link":"https://tmwgc.com/terms"},
+      {"label":"Support Center","link":"https://support.tmwgc.com"}
     ],
-    "address":"2nd Floor, Jalani Towers, Gandhi Rd, Pammal",
-    "pincode":"Chennai, Tamil Nadu - 600075",
-    "InstituteName":"Dehustle Institute Private Limited",
+    "address":"#1, VOC Street, Mahalaxmi Nagar",
+    "pincode":"East Tambaram, Chennai - 600 073",
+    "InstituteName":"Dewallstreet Private Limited",
     "Institute_discription":"Registered and Incorporated Under Ministry of Corporate Affairs as",
-    "Institute_details":"In the competitive world of aviation, helicopter service providers must differentiate themselves from the competition to attract high-end clientele. Luxury, exotic, and signature experiences are what discerning  customers are seeking, and branding plays a critical role in conveying these values. Crafting a strong brand strategy, coupled with an effective content and digital strategy, can elevate a helicopter service provider from being just a mode of transportation to a sought-after experience. This article delves into the critical importance of branding for helicopter service providers in the aviation industry and the key strategies they can employ to stand out in a crowded marketplace.",
+    "Institute_details":"TMWGC, otherwise abbreviated as The Madras Wallstreet Growth Consulting is a legally structured unit of Dewallstreet Private Limited, an India based multiple interest conglomeration ecosystem in its early seed stage, which is ethically incorporated and regulated under the norms of Ministry of Corporate Affairs (MCA) & Registrar of Companies, Chennai (RoC) and follows industrial reputation trust marks, quality delivery standards, ethical business & market practices. The services offered through TMWGC, solely follows the protocols from Dewallstreet Private Limited and hence in any case of legal intermediations and arbitrations, Dewallstreet Private Limited will be the solely responsible and authorized board to go through the legal procedures on behalf of the business name referred herein as 'TMWGC', or 'The Madras Wallstreet Growth Consulting'.",
     "license_informations":{
       "label":"Registration & License Informations",
       "license":[
@@ -139,7 +141,7 @@
         },
         {
           "label":"Permanent Account Number",
-          "number":"CHED13076A"
+          "number":"AAICD6464C"
         },
         {
           "label":"Tax and Service Deduction Number",
@@ -153,16 +155,19 @@
      {
       "label":"Official Announcements, & Other Company Gazette Documents",
       "icon":"/icons/certifications/3.svg",
+      "link":"https://drive.google.com/drive/folders/1-R5RyRPfht9vPYeptqpwMLW-72eAJfa_",
       "split":"Accessible"
      },
      {
       "label":"Government of India Tax Registration & Annual Compliance Filings",
       "icon":"/icons/certifications/1.svg",
+      "link":"https://drive.google.com/drive/folders/1knbClaUolRE5VhMyx7NYyW87-ohKObul",
       "split":"Back"
      },
      {
-      "label":"Certificate of Incorporation, Shareholders Pattern, Articles of Association & Memorandums",
+      "label":"Certificate of Incorporation, Articles of Association & Memorandums",
       "icon":"/icons/certifications/2.svg",
+      "link":"https://drive.google.com/drive/folders/1KfPDSURMIyglAQPJI7tX0agvsUfjZNfT",
       "split":"Flexible"
      }
     ]
@@ -170,33 +175,35 @@
   "socialMediaIcons":[
     {
       "icon":"/icons/socialMedia/twitter.svg",
-      "label":"Twitter"
+      "label":"Twitter",
+      "link":"https://x.com/tmwgc"
     },
     {
       "icon":"/icons/socialMedia/linkedin.svg",
-      "label":"Linkedin"
+      "label":"Linkedin",
+      "link":"https://www.linkedin.com/in/tmwgc"
     },
     {
       "icon":"/icons/socialMedia/youtube.svg",
-      "label":"Youtube"
-    },
-    {
-      "icon":"/icons/socialMedia/faceBook.svg",
-      "label":"FaceBook"
+      "label":"Youtube",
+      "link":"https://youtube.com/@tmwgc"
     },
     {
       "icon":"/icons/socialMedia/instagram.svg",
-      "label":"FaceBook"
+      "label":"Instagram",
+      "link":"https://www.instagram.com/tmwgc"
     }
   ],
   "contactIcons":[
     {
       "icon":"/icons/socialMedia/phone.svg",
-      "label":"9677754778"
+      "label":"+91 63839 41386",
+      "link":"tel:+916383941386"
     }, 
     {
       "icon":"/icons/socialMedia/send.svg",
-      "label":"edu@sarvaloka.in"
+      "label":"consult@tmwgc.com",
+      "link":"mailto:consult@tmwgc.com"
     }
   ]
 }

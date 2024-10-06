@@ -37,10 +37,11 @@
 	display: flex;
 	justify-content: space-between;
 }
-.SmMobileViewList{
-	display: none;
+.mobileViewList {
+	display: flex;
+	gap: 20px;
 	flex: 1 1;
-	justify-content: space-between;
+	justify-content: space-around;
 	overflow-x: auto;
 	white-space: nowrap;
 	scrollbar-width: none;
@@ -56,26 +57,11 @@
 	.tabViewList {
 		display: none;
 	}
-	.mobileViewList {
-		display: flex;
-		gap: 20px;
-		flex: 1 1;
-		justify-content: space-around;
-		overflow-x: auto;
-		white-space: nowrap;
-		scrollbar-width: none;
-	}
+	
 }
 @media (max-width: 426px){
 	.links {
 		font-size: 12px;
 		padding: 15px;
-	}
-	.SmMobileViewList{
-		display: flex;
-		overflow-x: hidden;
-	}
-	.mobileViewList {
-		display: none;
 	}
 }

@@ -4,6 +4,8 @@ import styles from '../styles/nav.module.css';
 import React, { useState } from 'react';
 import Image from 'next/image';
 import { FloatMobile, Services } from '../components';
+import up from '../../public/icons/hamburger/up.svg';
+import right from '../../public/icons/hamburger/right.svg';
 import Settings from '../../public/stores/settings.json';
 
 interface NavProps {
@@ -40,7 +42,7 @@ const Nav: React.FC<NavProps> = ({ homeLogo, isSlickOn }) => {
           onClick={handleServiceListToggle}>
           <Image
             style={{ cursor: 'pointer' }}
-            src={'/icons/hamburger/right.svg'}
+            src={serviceList ? '/icons/hamburger/up.svg' : '/icons/hamburger/right.svg'}
             alt="Hamburger Icon"
             width={24}
             height={24}

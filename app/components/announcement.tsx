@@ -48,7 +48,7 @@ const Announcement: React.FC<AnnouncementProps> = ({ title, content, icons }) =>
           <div className={styles.announcement}>
             <div className={styles.announcementIn}>
               {/* <Image className={styles.iconSize} src={volume} alt='alt' /> */}
-              <BiSolidMegaphone size={25} />
+              <BiSolidMegaphone size={25} color="#00D622" />
 
               <h1 className={styles.heading}>{title}</h1>
             </div>

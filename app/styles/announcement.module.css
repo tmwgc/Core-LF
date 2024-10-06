@@ -9,11 +9,12 @@
 .heading {
 	font-size: 18px;
 	font-weight: 600;
+	letter-spacing: -0.5px;
 }
 .paragraph {
 	margin: 0px;
 	font-size: 14px;
-	color: var(--primary-little-dark);
+	color: var(--primary-dark);
 	font-weight: 600;
 }
 
@@ -28,7 +29,7 @@
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	gap: 50px;
+	gap: 30px;
 }
 .announcement {
 	background-color: white;
@@ -59,7 +60,6 @@
 .cancelIcon,
 .cancelIconInside {
 	display: flex;
-	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 	gap: 5px;
@@ -70,15 +70,11 @@
 .cancelIcon {
 	display: none;
 }
-.cancelBtn {
-	width: 30px;
-	height: 30px;
-	cursor: pointer;
-}
+
 
 .cancelBtnText {
-	color: var(--secondary-text);
-	font-size: 12px;
+	color: #656565;
+	font-size: 14px;
 }
 .cancel {
 	text-align: center;
@@ -88,13 +84,20 @@
 	size: 10px;
 }
 
-.iconSize {
+.iconSize,.cancelBtn {
 	width: 24px;
 	height: 24px;
 	cursor: pointer;
 }
 
 /* media query */
+@media screen and (max-width:1300px) {
+	.content {
+		display: flex;
+		flex-direction: column;
+		gap: 15px;
+	}
+}
 
 @media screen and (max-width: 769px) and (min-width:426px) {
 	.content {
@@ -115,13 +118,6 @@
 	}
 	.announcementText {
 		font-size: 14px;
-	}
-
-	.cancelIcon {
-		display: flex;
-	}
-	.cancelIconInside {
-		display: none;
 	}
 }
 @media screen and (max-width:425px) {
@@ -148,15 +144,19 @@
 		font-size: 11px;
 		font-weight: 600;
 	}
+	.announcementBtn{
+		gap: 15px;
+	}
+	.cancelBtnText{
+		font-size: 12px;
+	}
 	.announcementText {
 		font-size: 12px;
 	}
-
-	.cancelIcon {
-		display: flex;
-	}
-	.cancelIconInside {
-		display: none;
+}
+@media screen and (min-width:2000px) {
+	.announcement{
+		gap: 0px;
 	}
 }
 @media screen and (min-width:1440px) {

@@ -26,13 +26,13 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  gap: 30px;
+  gap: 15px;
 }
 .left {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  gap: 30px;
+  gap: 15px;
 }
 .accessDiv {
   display: flex;
@@ -41,15 +41,28 @@
   align-items: center;
 }
 .btn {
-  padding: 15px;
+  padding: 10px 32px;
   margin: auto;
 }
 .accessText {
-	color:var(--primary-dark);
+	color:var(--faded-blue);
 	font-size: 14px;
+}
+.mainLogo{
+  width: 160px;
+  height: 70px;
 }
 
 /* Media query for screens with a maximum width of 768px */
+
+@media screen and (min-width:2000px) {
+  .right {
+    gap: 30px;
+  }
+  .left {
+    gap: 30px;
+  }
+}
 
 @media (max-width: 768px) and (min-width:426px) {
   .accessText {
@@ -71,6 +84,11 @@
  
 }
 @media screen and (max-width:425px) {
+  .head{
+    padding: 0 20px;
+  }
+}
+@media screen and (max-width:700px) {
   .btn{
     display: none;
   }
@@ -83,10 +101,7 @@
   .mobile {
     display: block;
   }
-  .head {
-    gap: 0;
-    padding: 20px;
-  }
+ 
   .left {
     gap: 20px;
   }
